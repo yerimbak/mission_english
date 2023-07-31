@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="mainPage"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu"><span></span></button>
+                    <button class="btn-search"><span></span></button>
+                </header>
+
+                <div id="menu"> <!-- menuOpen 클래스 추가시 메뉴 보임 // 하단 스크립트 -->
+                    <div class="menu-wrap"> <!-- on 클래스 추가시 보임 -->
+                        <div class="user-info">
+                            <div class="name">김학생</div>
+                            <div class="nickName">Hayden</div>
+                            <div class="email">student@email.com</div>
+                        </div>
+                        <div class="user-data">
+                            <div class="d-day">
+                                학습완료 <strong>D-59일</strong>
+                            </div>
+                            <div class="statistics">
+                                <div class="complete-learning">
+                                    <div class="title">완료 학습 수</div>
+                                    <div class="count"><strong>79개</strong> <span>/</span> 300개</div>
+                                </div>
+                                <div class="bar"></div>
+                                <div class="learning-time">
+                                    <div class="title">누적 학습 시간</div>
+                                    <div class="count"><strong>128분</strong> <span>/</span> 500분</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-list">
+                            <ul>
+                                <li class="menu9">음성 인식 난이도 설정</li>
+                                <li class="menu1">홈</li>
+                                <li class="menu2">현재 차수 학습 리스트</li>
+                                <li class="menu3">북마크<span class="count">50</span></li>
+                                <li class="menu4">지난 차수 학습 내역</li>
+                                <li class="menu5">LISA LAB<span class="new">NEW</span></li>
+                                <li class="menu6">서비스 개선 제안</li>
+                                <li class="menu7">쿠폰함</li>
+                                <li class="menu8">오픈소스 정보</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-bg"></div> <!-- on 클래스 추가시 보임 -->
+                </div>
+
+                <div class="contents-wrap">
+
+                    <div id="main" class="scrollWrap">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p>왼쪽 상단 메뉴 클릭</p>
+                    </div>   
+
+                </div>  
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>    
+
+        // 메뉴 show
+        document.querySelector('header .btn-menu').addEventListener('click', function(){
+            document.querySelector('#menu').classList.add('menuOpen');
+
+            setTimeout(() => {
+                document.querySelector('#menu .menu-wrap').classList.add('on');
+                document.querySelector('#menu .menu-bg').classList.add('on');
+            }, 1);
+        })
+
+        // 메뉴 hide
+        document.querySelector('#menu .menu-bg').addEventListener('click', function(){
+            document.querySelector('#menu .menu-wrap').classList.remove('on');
+            document.querySelector('#menu .menu-bg').classList.remove('on');
+
+            setTimeout(() => {
+                document.querySelector('#menu').classList.remove('menuOpen');
+            }, 500);
+        })
+
+    </script>
+</body>
+</html>

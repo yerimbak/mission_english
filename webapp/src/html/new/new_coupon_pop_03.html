@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      <!-- 220524 header 변경 -->
+      @@include('../include/header.html', {
+      headerKeyTitle: '헤더영역',
+      headerTitleText:'헤더 서브텍스트'
+      })
+      <style>
+        .btn.open-popup {
+          background: #e8e8e8;
+          padding: 10px 20px;
+          margin-top: 20px;
+        }
+      </style>
+      <div class="content type-mission">
+        <!-- D : open-popup 클래스,  data-modal-name="팝업화면명" 필요 -->
+        <!-- D : 팝업 닫는 함수 modalClose() -->
+        <button type="button" class="btn open-popup" data-modal-name="pop01">팝업버튼</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-dim modal" style="display: block;"></div>
+  <div class="modal-wrap type-alert size-xs show" id="pop01">
+    <div class="content">
+      <div class="title">
+          &#127881;<br>
+          이제 북클래스 전체클래스 탭에서<br>
+          원하는 클래스를 구독해 보세요
+      </div>
+      <div class="sub-text">북클래스로 이동하시겠어요?</div>
+    </div>
+    <div class="btn-wrap">
+      <a href="#none" class="btn-pop type-01" onclick="modalClose()">아니요</a>
+      <a href="#none" class="btn-pop type-02">네, 좋아요!</a>
+    </div>
+  </div>
+
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

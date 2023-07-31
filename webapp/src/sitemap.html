@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sitemap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+</head>
+<body ontouchstart="">
+    <ul class="tabs-btn">
+      <li class="on"><button>신규 작업</button></li>
+      <li><button>이전 작업</button></li>
+    </ul>
+    @@include('./index.html')
+    <style>
+        #portal_wrap {position:absolute;overflow-y: scroll;width: 300px; height: 100%;-webkit-overflow-scrolling: touch; background: #fff; z-index: 1;}
+        #portal_wrap::-webkit-scrollbar {width: 5px;}
+        #portal_wrap::-webkit-scrollbar-thumb {background-color: #eee;border-radius: 5px;overflow: hidden;}
+        section .portal_box {width:100%; margin-right:0;}
+        section .portal_box ul li a.btn,section .portal_box ul li[class*='new'] a.btn {display: inline-block; width:auto; border:0px; border-bottom:1px solid #008fff; border-radius: 0; color:#008fff;background-color: transparent}
+        section .portal_box ul li a.btn:hover,section .portal_box ul li a.btn.on {color:#0b00a8; border-color:#0b00a8; background-color: transparent;}
+        section .portal_box ul + h2 {margin-top:30px;}
+        section + section {margin:30px 0 0 0;padding:20px 0 0 0;border-top:1px dashed #ccc;}
+        iframe {width: calc(100% - 300px);position: absolute;left: 320px;top: 0;height: 100%;box-sizing: border-box;display: inline-block;border: 0;-webkit-overflow-scrolling: touch;}
+        iframe.mobile {width: 377px; height: 740px; padding: 0; overflow: scroll;}
+		.tabs-btn {padding:20px 20px 0; }
+        .tabs-btn li { display: inline-block; margin: 0 5px 5px 0; text-align: center;padding: 5px 10px; background: #aaa; border-radius: 5px; color: #fff; font-size: 13px; }
+        .tabs-btn li:last-child { margin-right: 0; }
+        .tabs-btn li.on { background: #328ff6; }
+        .tabs-btn li button { display: block; color: #fff; display: inline-block; background: transparent; border:0; }
+        #portal_wrap > div {display:none}
+        #portal_wrap > div.on {display:block;}
+        section .portal_box ul li.comp a.on {background:#00bd0d;}
+    </style>
+    <iframe src="" class="mobile" name="viewer" ></iframe>
+	<script>
+        const box = document.querySelector('#portal_wrap');
+        const section = document.querySelectorAll('#portal_wrap section');
+        const tabsBtn = document.querySelectorAll('.tabs-btn > li');
+        const tabBtnSiblings = t => [...tabsBtn].filter(e => e != t);
+        
+        const newSection = document.createElement('div');
+        const oldSection = document.createElement('div');
+        newSection.classList.add('on');
+        for(let i=0; i<section.length; i++) {
+            if(section[i].classList.contains('new')) {
+                newSection.append(section[i]);
+            }else {
+                oldSection.append(section[i]);
+            }
+        }
+        box.append(newSection,oldSection);
+
+        tabsBtn.forEach((element,index) => {
+            element.addEventListener('click',function(){
+                box.scrollTo(0, 0);
+                if(!this.classList.contains('on')) {
+                    this.classList.add('on');
+                    tabBtnSiblings(this)[0].classList.remove('on');
+                    box.children[index].classList.add('on');
+                    if(box.children[index+1]) {
+                        box.children[index+1].classList.remove('on');
+                    }
+                    if(box.children[index-1]) {
+                        box.children[index-1].classList.remove('on');
+                    }
+                }
+            })
+            
+        });
+ 
+        
+        const links = document.querySelectorAll('#portal_wrap a');
+        for(let i=0; i<links.length; i++) {
+            links[i].setAttribute('target','viewer');
+            const linksClone = links[i].cloneNode();
+            linksClone.classList.add('btn');
+            linksClone.textContent = '새 창'
+            linksClone.setAttribute('target','_blank');
+            links[i].after(linksClone);
+        }
+        
+		const btn = document.querySelectorAll('a:not(.btn)');
+        const btnSiblings = t => [...btn].filter(e => e != t );
+		for(let i = 0; i < links.length; i++) {
+			links[i].addEventListener('click',function(){
+                this.classList.add('on');
+                btnSiblings(links[i]).forEach(function(a){
+                    a.classList.remove('on');
+                })
+            });
+		}
+        
+	</script>
+</body>
+</html>

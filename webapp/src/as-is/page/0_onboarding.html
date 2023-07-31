@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="onboardingPage">
+
+                <div class="onboarding-wrap">   
+                    <div class="slide-wrap">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../img/img_onboarding_1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../img/img_onboarding_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../img/img_onboarding_3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../img/img_onboarding_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn-orange">시작하기</button>
+                    </div>
+                </div>
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            pagination : { // 페이징 설정
+                el : '.swiper-pagination',
+            },
+        })
+    </script>
+</body>
+</html>

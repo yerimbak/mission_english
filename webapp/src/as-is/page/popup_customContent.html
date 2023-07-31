@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="mainPage"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu"><span></span></button>
+                    <button class="btn-search"><span></span></button>
+                    <div class="toggle-mode">
+                        <button class="btn-learn on">Learn</button> <!-- 활성화된 버튼은 on -->
+                        <button class="btn-run">Run</button>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="main" class="main-l scrollWrap">
+
+                    </div> 
+
+                    <button class="btn-scrollTop"><span></span></button>
+
+                </div>  
+
+            </div>  
+
+            <div class="popup_customContent">
+                <div class="inner">
+                    <div class="top-wrap">
+                        <p><b>LISA</b>가 학습콘텐츠를 추천해 드릴게요!<br>어떤 콘텐츠에 관심이 있으신지요?</p>
+                        <span>(3개까지 복수 선택 가능)</span>
+                    </div>
+                    <div class="btm-wrap">
+                        <div class="category-list-wrap">
+                            <ul>
+                                <li> <!-- 선택된건 selected 클래스 추가-->
+                                    <p>포스트코로나를 대비한 여행영어</p>
+                                </li>
+                                <li>
+                                    <p>클레임 영어 익히고 클레임 걸기</p>
+                                </li>
+                                <li>
+                                    <p>게임 영어 익히고 게임 인싸 되기</p>
+                                </li>
+                                <li>
+                                    <p>다이어트&헬스 영어하고 슬림해지기 다이어트&헬스 영어하고 슬림해지기</p>
+                                </li>
+                                <li>
+                                    <p>뉘앙스 바로 알기</p>
+                                </li>
+                                <li>
+                                    <p>콩글리시 쳐 부수기</p>
+                                </li>
+                                <li>
+                                    <p>뉘앙스 바로 알기</p>
+                                </li>
+                                <li>
+                                    <p>콩글리시 쳐 부수기</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn-save disable">저장하고 학습하기</button> <!-- 비활성화는 disable 클래스 추가 -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>        
+        // 예시 스크립트
+        var selectedCount = 0;
+        
+        document.querySelectorAll('.popup_customContent .category-list-wrap ul li').forEach(function(item){
+            item.addEventListener('click', function(){
+                this.classList.toggle('selected');
+
+                if(this.classList.contains('selected')){
+                    selectedCount++;
+                }else {
+                    selectedCount--;
+                }
+
+                if(selectedCount > 0){
+                    document.querySelector('.popup_customContent .btn-save').classList.remove('disable');
+                }else {
+                    document.querySelector('.popup_customContent .btn-save').classList.add('disable');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

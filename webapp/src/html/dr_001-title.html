@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '',
+				headerTitleText:''
+			})
+			<!-- 220608 : 전반적인 마크업 구조 수정 -->
+			<div class="content type-mission">
+				<div class="key-wrap onbording">
+					<div>
+						<div class="key-title icon-01">연습대화</div>
+						<div class="key-title icon-02">실전대화</div>
+						<div class="key-title icon-03">핵심문법</div>
+						<div class="key-title icon-04">표현학습</div>
+					</div>
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+			<!-- //220608 : 전반적인 마크업 구조 수정 -->
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body class="">
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '',
+				headerTitleText:''
+			})
+			<div class="content type-mission">
+				<!-- 220608 : 전반적인 마크업 구조 수정 -->
+				<div class="key-wrap onbording">
+					<!-- 220610 : icon-02 클래스 추가 및 텍스트 수정 -->
+					<div class="key-title icon-02">핵심문법</div>
+					<div class="typo-wrap">
+						<div class="typo">
+							Shall we have <br> some dessert?
+						</div>
+						<div class="sub-text">내가 실수하면 어떡하지?</div>
+					</div>
+					<!-- 220616 : sub-wrap 태그안에서 위로  태그밖으로 위치 이동 -->
+					<!-- 220622 : color-01 -> type-01 클래스 변경 및 하단 내용 태그 추가 (what if) -->
+					<div class="sub-text type-01 ">
+						<div>
+							<div class="sub-key-box">
+								<p class="en-txt"><span>What</span><span>if</span></p>
+								<p class="ko-txt">~ 하면 어떡하지?</p>
+							</div>
+							<div class="sub-key-box">
+								<p class="en-txt"><span>What</span><span>comes</span><span>around</span><span>goes</span><span>around</span><span>around</span> <span>~</span></p>
+								<p class="ko-txt">뿌린대로 거둔다</p>
+							</div>
+						</div>
+					</div>
+					<div class="sub-wrap">
+						<div class="btn-wrap">
+							<button type="button" class="btn btn-round color-01">
+								<!-- 220610 : icon 삭제 및 텍스트 수정 -->
+								<span>시작하기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- //220608 : 전반적인 마크업 구조 수정 -->
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

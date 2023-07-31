@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			<div class="content type-flex">
+				<div class="loginWrap">
+					<div class="img-logo">
+						<img src="../img/buttertime/logo02.png" alt="버터타임" class="logo">
+					</div>
+					<div class="img-txt">
+						<img src="../img/buttertime/login_txt.png" alt="영어가 일상에 녹아들 시간
+						버터타임에 오신것을
+						환영합니다.">
+					</div>
+					<div class="login-form">
+						@@include('../include/default_filed.html', {
+							inputType: 'text',
+							label: '아이디',
+							placeholder: '이메일 주소를 입력하세요.',
+							className: 'type-box',
+						})
+						@@include('../include/default_filed.html', {
+							inputType: 'password',
+							label: '비밀번호',
+							placeholder: '비밀번호를  입력하세요.',
+							className: 'type-box',
+						})
+						<div class="btn-wrap">
+							<button type="button" class="button is-full is-light">로그인</button>
+						</div>
+						<div class="btn-wrap">
+							<button type="button" class="btn btn-txt color-primary">이메일 회원 가입</button>
+							<button type="button" class="btn btn-txt">비밀번호 찾기</button>
+						</div>
+					</div>
+					<div class="login-bottom">
+						<h3>SNS 계정으로 로그인</h3>
+						<div class="login-util">
+							<button type="button" class="btn-circle naver"><img src="../img/icons/icon-naver2.png" alt="네이버 로그인"></button>
+							<button type="button" class="btn-circle kakao"><img src="../img/icons/icon-kakao2.png" alt="카카오톡 로그인"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+      <!-- 모달 -->
+      <div class="bg-dim modal" style="display: block;"></div>
+      <div class="modal-wrap type-alert size-xs show">
+        <div class="content">
+          <div class="title">탈퇴 계정입니다.</div>
+          <div class="sub-text type2">
+            22년 11월 1일에 회원 탈퇴가<br>완료된 계정입니다.<br>계정정보를 다시 확인해주세요.
+          </div>
+        </div>
+        <button class="button is-light w-100" onclick="modalClose()">확인</button>
+      </div>
+
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+
+</html>

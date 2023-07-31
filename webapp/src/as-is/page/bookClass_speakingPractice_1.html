@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="bookClassContainer">
+
+                <header>
+                    <button class="btn-back"><span></span></button>
+                    <div class="desc">발음에 주의해서 말해보세요.</div>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="speakingPractice">
+                        <div class="learning-cont-wrap">
+                            <div class="q-text">
+                                <p>근무에서 근무하시나요?</p>
+                            </div>
+                            <div class="count-text">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="learning-footer-wrap">
+                            <div class="inner">
+                                <div class="state-speak">Speak</div>
+                                <div class="time">00:10</div>
+                                <div class="voice-wave disable"> <!-- disable 제거시 활성화-->
+                                    <ul class="">
+                                        <li><div class="dot"></div></li> <!-- height : 최소:0.4rem, 최대:2.4rem -->
+                                        <li><div class="dot"></div></li>
+                                        <li><div class="dot"></div></li>
+                                        <li><div class="dot"></div></li>
+                                        <li><div class="dot"></div></li>
+                                    </ul>
+                                    <p>완료</p>
+                                </div>
+                                <div class="time-progress-wrap">
+                                    <div class="bg" style="width:100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                    
+                <div id="btmMenu" class="type2"> <!-- open 클래스 추가시 메뉴 오픈 / type2 추가시 하단 여백 달라짐 -->
+                    <button class="btn-menuOpen"></button>
+                    <div class="menu-wrap">
+                        <div class="dimm"></div>
+                        <ul>
+                            <li>
+                                <button class="btn-levelList">레벨 리스트</button>
+                                <button class="btn-step">단계별 학습</button>
+                                <button class="btn-home">Home</button>
+                                <button class="btn-menuClose"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>         
+    
+        // 하단 메뉴 보이기
+        document.querySelector('#btmMenu .btn-menuOpen').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.add('open');
+        })
+
+        // 하단 메뉴 숨김
+        document.querySelector('#btmMenu .btn-menuClose').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.remove('open')
+        })
+
+
+
+        // 학습 진행
+        var startCount = 3;
+        var startProgress = 100;
+        var countDown;
+        var countProgress;
+            
+        countDown = setInterval(function(){
+            if(startCount >= 0){
+                document.querySelector('#speakingPractice .learning-cont-wrap .count-text span').textContent = startCount;
+                startCount--;
+            }else {
+                clearInterval(countDown);
+                document.querySelector('#speakingPractice .learning-cont-wrap .count-text').style.display = 'none';
+
+                document.querySelector('.learning-footer-wrap .voice-wave').classList.remove('disable');
+                document.querySelector('.learning-footer-wrap .voice-wave ul').classList.add('wave');
+
+                countProgress = setInterval(function(){
+
+                    if(startProgress >= -1){
+                        document.querySelector('.time-progress-wrap .bg').style.width = startProgress + '%';
+                        startProgress--;
+                    }else {
+                        clearInterval(countProgress);
+                        
+                        document.querySelector('.learning-footer-wrap .voice-wave').classList.add('complete');
+                        document.querySelector('.learning-footer-wrap .voice-wave ul').classList.remove('wave');
+                    }
+                }, 100)
+            }
+        }, 1000)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="bookClassContainer">
+
+                <header>
+                    <button class="btn-back"><span></span></button>
+                    <div class="desc">표시된 내용을 주의하며 들어보세요.</div>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="patternPractice">
+                        <div class="learning-cont-wrap">
+                            <ul>
+                                <li class="on"> <!-- 활성화된건 on 추가 -->
+                                    <div class="text-wrap">
+                                        <p>I’d love to!</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Where would you like to go, if you can go anywhere for a trip?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Where would you like to go, if you can go anywhere for a trip?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                                <li> 
+                                    <div class="text-wrap">
+                                        <p>Would you like something to drink?</p>
+                                    </div>
+                                    <button class="btn-speak"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="learning-footer-wrap">
+                            <div class="inner">
+                                <div class="state-listen">Listen</div>
+                                <button class="btn-pause">일시정지</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                    
+                <div id="btmMenu" class="type2"> <!-- open 클래스 추가시 메뉴 오픈 / type2 추가시 하단 여백 달라짐 -->
+                    <button class="btn-menuOpen"></button>
+                    <div class="menu-wrap">
+                        <div class="dimm"></div>
+                        <ul>
+                            <li>
+                                <button class="btn-levelList">레벨 리스트</button>
+                                <button class="btn-step">단계별 학습</button>
+                                <button class="btn-home">Home</button>
+                                <button class="btn-menuClose"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>         
+    
+        // 하단 메뉴 보이기
+        document.querySelector('#btmMenu .btn-menuOpen').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.add('open');
+        })
+
+        // 하단 메뉴 숨김
+        document.querySelector('#btmMenu .btn-menuClose').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.remove('open')
+        })
+    </script>
+</body>
+</html>

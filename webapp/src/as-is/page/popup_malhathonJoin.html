@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="mainPage"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu new"><span></span></button> <!-- new 추가시 new 아이콘 추가-->
+                    <button class="btn-search"><span></span></button>
+                    <div class="toggle-mode">
+                        <button class="btn-learn on">Learn</button> <!-- 활성화된 버튼은 on -->
+                        <button class="btn-run">Run</button>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <button class="btn-mainLisaLab"></button>
+
+                    <div id="main" class="main-l scrollWrap">
+
+                    </div> 
+
+                    <button class="btn-scrollTop"><span></span></button>                     
+
+                    <div class="modal modal-malhathonJoin">
+                        <div class="modal-cont-wrap">
+                            <div class="title-wrap">
+                                <div class="title">참가를 원하시는 대회를 선택해주세요.</div>                                
+                                <button class="btn-modal-close"></button>
+                            </div>
+                            <div class="competition-list-wrap">
+                                <div class="accordion-wrap on"> <!-- on 추가시 펼처짐 -->
+                                    <div class="accordion-title-wrap">
+                                        <div class="status-wrap">
+                                            <div>대회 진행 중</div>
+                                            <div>참가 신청 가능</div>
+                                        </div>
+                                        <div class="competition-title">LG톤프리배 제2회 오픈 말하톤 대회</div>
+                                        <span class="arr"></span>
+                                    </div>
+                                    <div class="accordion-cont-wrap">
+                                        <div class="date-info-wrap">
+                                            <p>신청기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>대회기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>결과발표 : 12월 21일 (화) 10:00</p>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-orangeLine">참가 신청</button>
+                                            <button class="btn-orangeLine">대회 참가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-wrap"> 
+                                    <div class="accordion-title-wrap">
+                                        <div class="status-wrap">
+                                            <div>대회 진행 중</div>
+                                            <div class="end">참가 신청 불가</div> <!-- 끝난건 end 추가-->
+                                        </div>
+                                        <div class="competition-title">LG톤프리배 제2회 오픈 말하톤 대회</div>
+                                        <span class="arr"></span>
+                                    </div>
+                                    <div class="accordion-cont-wrap">
+                                        <div class="date-info-wrap">
+                                            <p>신청기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>대회기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>결과발표 : 12월 21일 (화) 10:00</p>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-orangeLine">대회 참가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-wrap"> 
+                                    <div class="accordion-title-wrap">
+                                        <div class="status-wrap">
+                                            <div class="end">대회 종료</div> <!-- 끝난건 end 추가-->
+                                            <div class="end">참가 신청 불가</div>
+                                        </div>
+                                        <div class="competition-title">제1회 윤선생 말하톤 대회 - 초등 A 반 (3~4학년)</div>
+                                        <span class="arr"></span>
+                                    </div>
+                                    <div class="accordion-cont-wrap">
+                                        <div class="date-info-wrap">
+                                            <p>신청기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>대회기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>결과발표 : 12월 21일 (화) 10:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-wrap"> 
+                                    <div class="accordion-title-wrap">
+                                        <div class="status-wrap">
+                                            <div class="end">대회 종료</div> <!-- 끝난건 end 추가-->
+                                            <div class="end">참가 신청 불가</div>
+                                        </div>
+                                        <div class="competition-title">LG톤프리배 제2회 오픈 말하톤 대회</div>
+                                        <span class="arr"></span>
+                                    </div>
+                                    <div class="accordion-cont-wrap">
+                                        <div class="date-info-wrap">
+                                            <p>신청기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>대회기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>결과발표 : 12월 21일 (화) 10:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-wrap"> 
+                                    <div class="accordion-title-wrap">
+                                        <div class="status-wrap">
+                                            <div class="end">대회 종료</div> <!-- 끝난건 end 추가-->
+                                            <div class="end">참가 신청 불가</div>
+                                        </div>
+                                        <div class="competition-title">LG톤프리배 제2회 오픈 말하톤 대회</div>
+                                        <span class="arr"></span>
+                                    </div>
+                                    <div class="accordion-cont-wrap">
+                                        <div class="date-info-wrap">
+                                            <p>신청기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>대회기간 : 12월 01일 (수) 09:00 ~ 12월 20일 (월) 18:00</p>
+                                            <p>결과발표 : 12월 21일 (화) 10:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>   
+        // accordion
+        document.querySelectorAll('.modal-malhathonJoin .accordion-wrap').forEach(function(e){
+            if(e.classList.contains('disable')){
+                return false
+            }else {
+                e.querySelector('.modal-malhathonJoin .accordion-title-wrap').addEventListener('click', function(item){
+                    if(e.classList.contains('on')){
+                        e.classList.remove('on');
+                    }else {
+                        e.parentNode.querySelectorAll('.modal-malhathonJoin .accordion-wrap').forEach(e => e.classList.remove('on'));
+                        e.classList.add('on');
+                    }                
+                })
+            }
+        })
+    </script>
+</body>
+</html>

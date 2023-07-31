@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<!-- h100 클래스 추가 필요 -->
+	<div id="app">
+		<div class="app-inner">
+			<div class="content type-flex">
+				<label class="checkbox">
+					<input type="checkbox">
+					<i></i>
+					<strong class="title">체크박스</strong>
+				</label>
+
+				<label class="radiobox">
+					<input type="radio">
+					<i></i>
+					<strong class="title">라디오박스</strong>
+				</label>
+
+				<div class="agree-box">
+					<div class="all">
+						<div class="agree-item">
+							<label class="checkbox">
+								<input type="checkbox">
+								<i></i>
+								<strong class="title">모두 동의합니다.</strong>
+							</label>
+						</div>
+					</div>
+					<div class="agree-item-list">
+						<ul>
+							<!-- 약관링크 일 경우 class="link" -->
+							<li class="agree-item">
+								<label class="checkbox">
+									<p class="title"><span>[필수]</span>만 14세 이상입니다.</p>
+									<input type="checkbox">
+									<i></i>
+								</label>
+							</li>
+							<li class="agree-item link">
+								<label class="checkbox">
+									<p class="title"><span>[필수]</span>만 14세 이상입니다.</p>
+									<input type="checkbox">
+									<i></i>
+								</label>
+								<button class="agree-link">약관 상세 보기</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

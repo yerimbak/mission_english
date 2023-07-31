@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="textBookContainer">
+
+                <header class="type2"> <!-- type2 추가시 흰색 화살표 -->
+                    <button class="btn-back"><span></span></button>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="stepSelect">
+                        <div class="inner">
+                            <div class="bg-wrap">
+                                <div class="bg" style="background-image:url('../img/textBook/bg_stepSelect.png')"></div> <!-- 백그라운드 이미지는 인라인 스타일로 -->
+                            </div>
+                            <div class="mission-title-wrap">
+                                <div class="top-text">Lesson 8 > Listen and Speak 1</div>
+                                <div class="btm-text">p.148 How Will You Be Remembered?</div>
+                            </div>
+                            <div class="learning-type-tab-wrap">
+                                <div class="tab-nav-wrap">
+                                    <ul>
+                                        <li class="on">Listening</li> <!-- on 추가시 활성화 -->
+                                        <li>Speaking</li>
+                                        <li class="recommend">Reading</li> <!-- 추천은 recommend 추가 -->
+                                    </ul>
+                                </div>
+                                <div class="select-title-wrap">
+                                    <div class="title">학습 단계를 선택하세요.</div>
+                                </div>
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on"> <!-- on 추가시 활성화 -->
+                                        <div class="step-select-wrap">
+                                            <div class="step-list">
+                                                <ul>
+                                                    <li class="complete">자막 없이 듣기</li> <!-- 완료된건 complete 추가 -->
+                                                    <li>문장 별로 반복 듣기</li>
+                                                    <li>듣고 문장 완성하기</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-cont">
+                                        <div class="step-select-wrap">
+                                            <div class="step-list">
+                                                <ul>
+                                                    <li class="complete">듣고 말하기</li> <!-- 완료된건 complete 추가 -->
+                                                    <li>문장 별 말하기</li>
+                                                    <li>실전 대화하기</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-cont">
+                                        <div class="step-select-wrap">
+                                            <div class="step-list">
+                                                <ul>
+                                                    <li class="complete">크게 읽어보기</li> <!-- 완료된건 complete 추가 -->
+                                                    <li>문장 해석하기</li>
+                                                    <li>영어 문장 만들기</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>       
+        // tabNav - tabCont
+        const tabNav = document.querySelectorAll('.tab-nav-wrap ul li');        
+        const tabCont = document.querySelectorAll('.tab-cont-wrap .tab-cont');     
+
+        function tabNavChange() {
+            tabNav.forEach(item => item.classList.remove('on'));
+            this.classList.add('on');            
+
+            const selectTabNavIndex = Array.prototype.indexOf.call(this.parentNode.children, this);
+            tabContChange(selectTabNavIndex);
+        }
+
+        function tabContChange(selectTabNavIndex) {
+            tabCont.forEach(item => item.classList.remove('on'));         
+            tabCont[selectTabNavIndex].classList.add('on');
+        }
+        
+        tabNav.forEach(item => item.addEventListener('click', tabNavChange)); 
+    </script>
+</body>
+</html>

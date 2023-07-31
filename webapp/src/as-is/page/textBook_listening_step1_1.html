@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="textBookContainer">
+
+                <header>
+                    <button class="btn-back"><span></span></button>
+                    <div class="translate-wrap">
+                        <p>해석</p>
+                        <button class="btn-translate"></button>
+                    </div>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="listening_noSubtitles">
+                        <div class="learning-cont-wrap">
+                            <div class="select-speed-wrap">
+                                <ul>
+                                    <li data-speed="0.8">x 0.8</li>
+                                    <li data-speed="1.0" class="on">x 1.0</li> <!-- on 추가시 활성화 -->
+                                    <li data-speed="1.5">x 1.5</li>
+                                </ul>
+                            </div>
+                            <div class="voice-wave-wrap">
+                                <div class="dot dot-color-1"></div>
+                                <div class="dot dot-color-1"></div>
+                                <div class="dot dot-color-1"></div>
+                                <div class="dot dot-color-1"></div>
+                                <div class="dot dot-color-1"></div>
+                                <div class="dot dot-color-2"></div>
+                                <div class="dot dot-color-2"></div>
+                                <div class="dot dot-color-2"></div>
+                                <div class="dot dot-color-2"></div>
+                                <div class="dot dot-color-2"></div>
+                            </div>
+                            <div class="translate-text-wrap">
+                                <div class="top-text">I often go to the movie theater located just a short distance from my house.</div>
+                                <div class="btm-text">저는 집에서 가까운 거리에 위치한 극장으로 자주 갑니다. 그렇습니다.</div>
+                            </div>
+                        </div> 
+                        <div class="learning-footer-wrap">
+                            <div class="inner">
+                                <div class="state-listen">Listen</div>
+                                <button class="btn-pause">일시정지</button>
+                                <div class="time">00:30</div>
+                                <div class="time-progress-wrap">
+                                    <div class="bg" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>     
+        // 헤더 해석버튼
+        document.querySelector('header .translate-wrap .btn-translate').addEventListener('click', function(){
+            this.classList.toggle('off');
+
+            showTranslate(this);
+        })
+
+        // 속도 조절버튼
+        const selectSpeed = document.querySelectorAll('.select-speed-wrap ul li');
+        function speedChange() {
+            selectSpeed.forEach(item => item.classList.remove('on'));
+            this.classList.add('on');
+        }
+        selectSpeed.forEach(item => item.addEventListener('click', speedChange)); 
+
+        // 하단 해석 보여주기
+        function showTranslate(item) {
+            const translateText = document.querySelector('.translate-text-wrap');
+
+            if(item.classList.contains('off')){
+                translateText.style.display = 'none';
+            }else {
+                translateText.style.display = 'block';
+            }
+        }
+
+    </script>
+</body>
+</html>

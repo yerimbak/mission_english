@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('./include/header.html', {
+				headerKeyTitle: '실전대화',
+				headerTitleText:'What do you do after work?'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="listening-wrap">
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							It’s almost over.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+					
+					<!-- 답변 내용이 없을시  no-data 클래스추가 -->
+					<div class="listening-box no-data">
+						<div class="text-wrap">
+							<div class="before">
+								답변하지 않으셨네요!<br> 다시 한번 영어로 말해보세요.
+							</div>
+						</div>
+					</div>
+					<!-- 답변 내용이 없을시  no-data 클래스추가 -->
+					<!-- 220630 : active  클래스 추가 -->
+					<div class="listening-box no-data active">
+						<div class="text-wrap">
+							<div class="before">
+								답변하지 않으셨네요!<br> 다시 한번 영어로 말해보세요.
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+</html>

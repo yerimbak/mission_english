@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '회원가입',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission">
+				<div class="joinWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							이메일을 입력해주세요.
+						</h3>
+            <p class="h-txt">입력하신 이메일은 아이디로 활용됩니다.<br>
+              반드시 본인 소유의 연락 가능한 이메일 주소를
+              입력해주세요. </p>
+					</div>
+          <div class="email-form">
+            @@include('../include/default_filed.html', {
+							className: 'is-success',
+							inputType: 'text',
+							placeholder: '아이디(이메일)',
+              value: '내용 입력 완료'
+							})
+            <div class="btn-wrap">
+              <button class="button is-full">인증번호 재전송</button>
+            </div>
+          </div>
+          @@include('../include/default_filed.html', {
+            className: 'is-time',
+            inputType: 'number',
+            placeholder: '인증번호 6자리 입력',
+            time: '15:00',
+            invalid: '인증번호가 일치하지 않습니다.'
+            })
+				</div>
+        <div class="btn-wrap is-fixed">
+          <button class="button is-full is-light" disabled>다음</button>
+        </div>
+			</div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

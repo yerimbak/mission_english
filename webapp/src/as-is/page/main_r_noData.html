@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="mainPage"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu"><span></span></button>
+                    <button class="btn-search"><span></span></button>
+                    <div class="toggle-mode type-r"> <!-- r모드에서는 type-r 추가 -->
+                        <button class="btn-learn">Learn</button>
+                        <button class="btn-run on">Run</button>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="main" class="main-r scrollWrap">
+                        <div class="linkBanner">
+                            <div class="banner-wrap2">
+                                <div class="bannerImg-wrap">
+                                    <div class="bannerImg" style="background-image:url('../img/banner_nodata.png');"></div>
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="achievement">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title"><strong>Hayden</strong>님의 성취현황입니다.</div>
+                                </div>
+                                <div class="list-wrap">
+                                    <div class="medal">
+                                        <div class="top-wrap">
+                                            <div class="medal-img"></div>
+                                            <div class="count"><span>0</span>개</div>
+                                        </div>
+                                        <p>획득 메달</p>
+                                    </div>
+                                    <div class="time">
+                                        <div class="top-wrap">
+                                            <strong>10</strong>
+                                            <div class="m-img"></div>
+                                        </div>
+                                        <p>달린 시간</p>
+                                    </div>
+                                    <div class="accuracy">
+                                        <div class="top-wrap">   
+                                            <div class="svg-wrap">
+                                                <svg width="80" height="80" viewBox="-2 -2 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="40" cy="40" r="36" stroke="rgba(255,255,255,0.16)" stroke-width="8"></circle>
+                                                    <circle cx="40" cy="40" r="36" stroke="#82E800" stroke-width="8" stroke-dashoffset="226"></circle>
+                                                    <!-- stroke-dashoffset 0(100%) ~ 226(0%) -->
+                                                </svg>    
+                                            </div>
+                                            <div class="percent-wrap">
+                                                <strong>0</strong>%
+                                            </div>
+                                        </div>
+                                        <p>평균 정확도</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testList">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title"><strong>도전! 말하톤 기출 문제</strong></div>
+                                    <p>전체 순위 중 10% 이내에 들경우 메달을 획득할 수 있어요.</p>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="testExample">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title"><strong>모의 말하톤 대회</strong></div>
+                                    <p>랜덤하게 출제되는 10개의 연속 상황 대화에 도전해보세요!</p>
+                                </div>                      
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="example-slide">
+                                                <div class="title">동생과 부모님 생신 파티 계획 세우기</div>
+                                                <div class="guide-wrap">
+                                                    <div class="box-wrap turn-ai">
+                                                        <div class="box">
+                                                            <p>Mee too.</p>
+                                                        </div>
+                                                        <div class="badge">AI</div>
+                                                    </div>
+                                                    <div class="box-wrap turn-my">
+                                                        <div class="box">
+                                                            <p>Do you <span class="blank"></span> <span class="blank"></span>?</p>                                                                
+                                                            <div class="guide-text">
+                                                                <p>Sean에게 근처에 좋은 커피숍이 있는지 물어보세요.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="badge">You</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="example-slide">
+                                                <div class="title">동생과 부모님 생신 파티 계획 세우기 2</div>
+                                                <div class="guide-wrap">
+                                                    <div class="box-wrap turn-ai">
+                                                        <div class="box">
+                                                            <p>Mee too.</p>
+                                                        </div>
+                                                        <div class="badge">AI</div>
+                                                    </div>
+                                                    <div class="box-wrap turn-my">
+                                                        <div class="box">
+                                                            <p>Do you <span class="blank"></span> <span class="blank"></span>?</p>                                                                
+                                                            <div class="guide-text">
+                                                                <p>Sean에게 근처에 좋은 커피숍이 있는지 물어보세요.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="badge">You</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="example-slide">
+                                                <div class="title">동생과 부모님 생신 파티 계획 세우기 3</div>
+                                                <div class="guide-wrap">
+                                                    <div class="box-wrap turn-ai">
+                                                        <div class="box">
+                                                            <p>Mee too.</p>
+                                                        </div>
+                                                        <div class="badge">AI</div>
+                                                    </div>
+                                                    <div class="box-wrap turn-my">
+                                                        <div class="box">
+                                                            <p>Do you <span class="blank"></span> <span class="blank"></span>?</p>                                                                
+                                                            <div class="guide-text">
+                                                                <p>Sean에게 근처에 좋은 커피숍이 있는지 물어보세요.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="badge">You</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>              
+                            </div>
+                        </div>
+                        <div class="space-last"></div>
+                    </div> 
+
+                    <button class="btn-scrollTop type-r"><span></span></button>
+
+                </div>  
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>                
+
+        // 헤더 색상 변경
+        document.querySelector('#main').addEventListener('scroll', function(e){
+            if(this.scrollTop == 0){
+                document.querySelector('header').classList.remove('bg-black');
+            }else {
+                document.querySelector('header').classList.add('bg-black');
+            }
+        })
+
+        // linkBanner 슬라이드                
+        var swiper = new Swiper(document.querySelector('.linkBanner .swiper-container'), {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination'
+            },
+            resistance : true,
+            resistanceRatio : 0
+        });
+
+        // testExample 슬라이드
+        var swiper2 = new Swiper(document.querySelector('.testExample .swiper-container'), {
+            slidesPerView: 1,
+            centeredSlides: true,
+            loop: false,
+        });
+
+    </script>
+</body>
+</html>

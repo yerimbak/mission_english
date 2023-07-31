@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body class="">
+	<div id="app">
+		<!-- 220610 : haeder가  핵심타이틀 + 서브타이틀 (높이가 클 경우)  header-l 클래스 추가header-l -->
+        <div class="app-inner header-l">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '발음연습',
+				headerTitleText:'What do you do after work?'
+			})
+			<!-- 220627 : type-mission -> type-flex  클래스 변경 -->
+			<div class="content type-mission bg-gray">
+				<div class="drill-practice swiper-practice">
+					<div class="turn-count">
+						<strong>Trun</strong>
+						<span class="main-prtc-paging"></span>
+					</div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="practice-wrap">
+								<!-- D: 스피커 활성화 이벤트 클래스 active -->
+								<i class="icon-speaker"></i>
+								<div class="text-item">
+									<div class="title">일 끝나고 뭐하세요?</div>
+									<!-- D : 활성화 클래스 active  -->
+									<div class="speaking-item">
+										<div class="ani-speaking">
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+										</div>
+									</div>
+								</div>
+								<div class="word-swiper-wrap">
+									<div class="swiper swiper-word">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<!-- D : 텍스트 가리는 클래스 blank -->
+												<div class="text-wrap blank">What do you do after work?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work22?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work33?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work44?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+										</div>
+										<div class="swiper-nav">
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-pagination"></div>
+											<div class="swiper-button-next"></div>
+										</div>
+									</div>
+									<!-- D : 말풍선 활성화 클래서 on -->
+									<div class="balloon-text bottom type1 on">잘 모를 때는 카드를 탭하여 <br>여러 모범답안을 확인해보세요</div>
+									<div class="balloon-text bottom type2">탭하면 다시 보고 들을 수 있어요</div>
+									<div class="balloon-text type3">북마크 해두시면 이문장만<br>나중에 다시 학습 할 수 있어요</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="practice-wrap">
+								<!-- D: 스피커 활성화 이벤트 클래스 active -->
+								<i class="icon-speaker active"></i>
+								<div class="text-item">
+									<div class="title">일 끝나고 뭐하세요?</div>
+									<!-- D : 활성화 클래스 active  -->
+									<div class="speaking-item">
+										<div class="ani-speaking volume10 active">
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+											<span class="item"></span>
+										</div>
+									</div>
+								</div>
+								<div class="word-swiper-wrap">
+									<div class="swiper swiper-word">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<!-- D : 텍스트 가리는 클래스 blank -->
+												<div class="text-wrap">What do you do after workWhat do you do after work?</div>
+												<button type="button" class="btn-bookmark on">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work22?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work33?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work44?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+										</div>
+										<div class="swiper-nav">
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-pagination"></div>
+											<div class="swiper-button-next"></div>
+							
+										</div>
+									</div>
+									<!-- D : 말풍선 활성화 클래서 on -->
+									<div class="balloon-text bottom type1">잘 모를 때는 카드를 탭하여 <br>여러 모범답안을 확인해보세요</div>
+									<div class="balloon-text bottom type2 on">탭하면 다시 보고 들을 수 있어요</div>
+									<div class="balloon-text type3">북마크 해두시면 이문장만<br>나중에 다시 학습 할 수 있어요</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="practice-wrap">
+								<!-- D: 스피커 활성화 이벤트 클래스 active -->
+								<!-- <i class="icon-speaker"></i> 사용안할경우 삭제 -->
+								<div class="result-wrap">
+									<div class="title">What do you after worko you after worko you after worko you after work? </div>
+									<div class="result-info">
+										<div class="result-info-item">
+											<div class="txt-wrap">
+												<div class="tit">원어민과 얼마나 유사했나요?</div>
+												<div class="score-wrap">
+													<span class="score">72</span>
+													<span>/</span>
+													<span>100</span>
+												</div>
+											</div>
+											<div class="scroe-bar">
+												<span class="bar color-01" style="width:72%"></span>
+											</div>
+										</div>
+										<div class="result-info-item">
+											<div class="txt-wrap">
+												<div class="tit">질문의 의도에 맞게 답했나요?</div>
+												<div class="score-wrap">
+													<span class="score">84</span>
+													<span>/</span>
+													<span>100</span>
+												</div>
+											</div>
+											<div class="scroe-bar">
+												<span class="bar color-02" style="width:84%"></span>
+											</div>
+										</div>
+									</div>
+									<div class="btn-wrap">
+										<button type="button" class="btn btn-round">
+											<span class="icon icon-01"></span>
+											<span>내 답변</span>
+										</button>
+										<button type="button" class="btn btn-round">
+											<span class="icon icon-02"></span>
+											<span>다시 도전</span>
+										</button>
+									</div>
+								</div>
+								<div class="word-swiper-wrap">
+									<div class="swiper swiper-word">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<!-- D : 텍스트 가리는 클래스 blank -->
+												<div class="text-wrap">What do you do after work?</div>
+												<button type="button" class="btn-bookmark on">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work22?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work331?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+											<div class="swiper-slide">
+												<div class="text-wrap">What do you do after work44?</div>
+												<button type="button" class="btn-bookmark">북마크</button>
+											</div>
+										</div>
+										<div class="swiper-nav">
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-pagination"></div>
+											<div class="swiper-button-next"></div>
+							
+										</div>
+									</div>
+									<!-- D : 말풍선 활성화 클래서 on -->
+									<div class="balloon-text bottom type1">잘 모를 때는 카드를 탭하여 <br>여러 모범답안을 확인해보세요</div>
+									<div class="balloon-text bottom type2">탭하면 다시 보고 들을 수 있어요</div>
+									<div class="balloon-text type3 on">북마크 해두시면 이문장만<br>나중에 다시 학습 할 수 있어요</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+	
+	<script>
+		// drillPrtcMainSwiper
+		var drillPrtcMainSwiper = new Swiper('.swiper-practice', {
+			spaceBetween: 10,
+			pagination: {
+				el: '.main-prtc-paging',
+				type: 'fraction'
+			},
+			slidesPerView: "auto",
+			centeredSlides: true,
+		});
+
+		// wordSwiper
+		var wordSwiper = new Swiper('.swiper-word', {
+			spaceBetween: 20,
+			pagination: {
+				el: '.swiper-nav .swiper-pagination',
+			},
+			allowTouchMove: false,
+			navigation: {
+				nextEl: '.swiper-nav .swiper-button-next',
+				prevEl: '.swiper-nav .swiper-button-prev'
+			}
+		});
+		
+
+		// 220608 practice 높이값 동일하게 맞춰주는 스크립트 추가 
+		const practiceHeightArr = [];
+		const practiceWrap = document.querySelectorAll('.practice-wrap');
+		practiceWrap.forEach(function(element,index){
+			practiceHeightArr.push(element.clientHeight);
+		});
+		
+		practiceWrap.forEach(function(element,index){
+			element.style.height = Math.max.apply(null,practiceHeightArr) + 'px'
+		});
+
+		
+	</script>
+</body>
+
+</html>

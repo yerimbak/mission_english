@@ -1,0 +1,17 @@
+
+<header class="header type-mission @@if(context.headerLine){@@headerLine}">
+    <button type="button" class="btn btn-prev">뒤로가기</button>
+    <div class="title-wrap">
+        <div class="key-title">@@headerKeyTitle</div>
+        @@if(context.headerTitleText){
+            <div class="title">@@headerTitleText</div>
+        }
+        @@if(context.bookclassUtil){
+        <button type="button" class="bookclass-util @@bookclassUtil"></button>
+        }
+        @@if(context.save){
+        <!-- 활성화 시 is-active 추가 -->
+        <button class="save @@if(context.className){@@className}">저장</button>
+        }
+</div>
+</header>

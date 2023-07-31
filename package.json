@@ -1,0 +1,58 @@
+{
+  "name": "leeseongryong",
+  "version": "1.0.0",
+  "description": "mission_english",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "env-cmd -f .env.rp gulp build",
+    "deploy": "env-cmd -f .env.rp gulp build && gh-pages -d webapp/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madive15/mission_english.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madive15/mission_english/issues"
+  },
+  "homepage": "https://github.com/madive15/mission_english#readme",
+  "browserslist": [
+    "> 0%",
+    "last 4 versions"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.15",
+    "browser-sync": "^2.26.7",
+    "del": "^6.0.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^3.2.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-modify-css-urls": "^2.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pxtorem": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.2.1"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			<div class="content type-flex">
+				<div class="loginWrap">
+					<div class="img-logo">
+						<img src="../img/buttertime/logo02.png" alt="버터타임" class="logo">
+					</div>
+					<div class="login-form">
+						@@include('../include/default_filed.html', {
+							inputType: 'text',
+							placeholder: '아이디(이메일)',
+						})
+						@@include('../include/default_filed.html', {
+							inputType: 'password',
+							placeholder: '비밀번호',
+						})
+						<div class="btn-wrap">
+							<button type="button" class="button is-full is-light">로그인</button>
+						</div>
+						<div class="btn-wrap flex-end">
+							<button type="button" class="btn btn-txt color-primary">이메일 회원가입</button>
+							<button type="button" class="btn btn-txt">비밀번호 찾기</button>
+						</div>
+					</div>
+					<div class="login-bottom">
+						<div class="join-txt">미션잉글리시가 처음이신가요? <a href="#none">회원가입</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <link rel="stylesheet" href="../css/aitutor_m.css">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '발음 연습 챌린지',
+      headerTitleText:''
+      })
+      <div class="content type-mission bg-gray">
+        <div class="mission-list-wrap">
+          <div class="list-title">
+            <p>총 3개의 챌린지가 있습니다.</p>
+          </div>
+          <ul>
+            <li class="missionCard">
+              <div class="inner">
+                <div class="title-top">영어 고수들도 많이 틀렸던 문장들🏆</div>
+                <div class="title-btm">Please mark these bags as 'fragile'. </div>
+                <div class="challenge-cont-btm-btn-wrap blink"><button class="btn-goChallenge">도전하기</button></div>
+              </div>
+            </li>
+            <li class="missionCard">
+              <div class="inner">
+                <div class="title-top">짧지만 꼭 필요한 문장 😎</div>
+                <div class="title-btm">I'm so tired. Thank you.</div>
+                <div class="challenge-cont-btm-btn-wrap blink"><button class="btn-goChallenge">도전하기</button></div>
+              </div>
+            </li>
+            <li class="missionCard">
+              <div class="inner">
+                <div class="title-top">저만 헷갈리나요? 😖 would / won't / want to </div>
+                <div class="title-btm">I would have ....</div>
+                <div class="challenge-cont-btm-btn-wrap blink"><button class="btn-goChallenge">도전하기</button></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button type="button" class="btn-top">top</button>
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+
+</html>

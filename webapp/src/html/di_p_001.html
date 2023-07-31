@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body class="type-guide">
+	<div id="app">
+        <div class="app-inner">
+			@@include('./include/header.html', {
+				headerKeyTitle: '',
+				headerTitleText:''
+			})
+			
+			<div class="content type-mission bg-gray">
+				<div class="dim"></div>
+				<div class="tab-area on">
+					<div class="tab-wrap">
+						<span class="bg"></span>
+						<button type="button" class="tab icon-speak on">말하기 모드</button>
+						<button type="button" class="tab icon-listening">듣기 모드</button>
+					</div>
+					<p class="info-txt study-mode">
+						2가지 학습모드를 제공하고 있어요.<br> 
+						지금 <strong>말할 수 없는 상황</strong>이라면<br>
+						<mark>듣기모드</mark>로 학습하세요!
+					</p>
+				</div>
+				
+				<div class="tab-cont speaking-wrap on">
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div>
+					
+					<div class="speaking-box active" data-speakingBox="event01">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="question">일 끝나고 뭐해1?</div>
+								<div class="answer-wrap blank">
+									<span>Me</span><span>too,</span><span>but</span><span>I</span><span>have</span><span class="show">room</span><span>for</span>
+								</div>
+								<div class="hint-wrap">
+									<button type="button" class="btn-hint">
+										힌트보기
+									</button>
+									<div class="hint-box">
+										<div class="hint-item">What do</div>
+										<div class="hint-item">work</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="speaking-item control-box between">
+							<div class="progress-bar" data-timer="5" data-progress="event01">
+								<span class="bar" style="width:15%"></span>
+							</div>
+							<!-- <div class="balloon-text bottom">AI가 목소리를 인식하면 물결이 움직여요</div> -->
+							<div class="ani-speaking" data-speakingAni="event01">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn btn-reset" data-refresh="event01">새로고침</button>
+								<button type="button" class="btn btn-stop" data-playing="event01">멈춤</button> <!-- D : 활성화 클래스 on -->
+							</div>
+						</div>
+						<button type="button" class="btn-bookmark">북마크</button>
+						<button type="button" class="btn-skip">skip <i class="icon"></i></button>
+					</div>
+
+				</div>
+			</div>
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

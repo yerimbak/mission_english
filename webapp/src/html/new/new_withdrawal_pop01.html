@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '회원탈퇴',
+				headerTitleText:'',
+        headerLine:''
+			})
+      <div class="content type-mission">
+				<div class="withdrawalWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							꼭 확인해주세요!
+						</h3>
+            <p class="h-txt"><strong>박수민님</strong>이 바로<br>사용할 수 있는 혜택이 남아있어요.</p>
+            <i class="ico"></i>
+            <div class="time">
+              남은 AI 대화시간 $n$분
+            </div>
+            <div class="gray-box">
+              <h4>회원 탈퇴시 유의사항</h4>
+              <ol>
+                <li>회원 탈퇴가 완료되면 개인정보, 서비스 이용 내역 등 모든 정보가 삭제됩니다. </li>
+                <li>탈퇴 후 3일 동안은 동일 ID(이메일 주소)로 <strong>재가입이 불가능</strong>해요.</li>
+              </ol>
+            </div>
+					</div>
+          <div class="btn-wrap is-fixed">
+            <strong>정말 탈퇴를 진행하시겠어요?</strong>
+            <button class="button is-full is-light">탈퇴 안할래요</button>
+            <button class="button is-full is-line">탈퇴 할게요</button>
+          </div>
+				</div>
+			</div>
+      
+      <!-- 모달 -->
+      <div class="bg-dim modal" style="display: block;"></div>
+      <div class="modal-wrap type-alert size-xs show">
+        <div class="content">
+          <div class="title">회원 탈퇴가 완료되었습니다.</div>
+          <div class="sub-text type2">
+            그동안 버터타임을 이용해주셔서<br>감사해요!
+          </div>
+        </div>
+        <button class="button is-light w-100" onclick="modalClose()">확인</button>
+      </div>
+
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

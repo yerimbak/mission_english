@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container">
+                
+                <header class="bg-white">
+                    <button class="btn-back"><span></span></button>
+                    <p class="centerText">서비스 개선 제안</p>
+                    <button class="btn-proposal"><span></span></button>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="serviceImprove">
+                        <div class="tabNav-wrap">
+                            <ul>
+                                <li class="on">새 제안</li> <!-- 활성화 on -->
+                                <li>답변 완료</li>
+                                <li>내 제안</li>
+                            </ul>
+                        </div>
+                        <div class="tabCont-wrap scrollWrap">
+                            <!-- 새 제안 -->
+                            <div class="tabCont on">
+                                <div class="categoryList">
+                                    <ul>
+                                        <li class="on">전체</li> <!-- 활성화 on -->
+                                        <li>오류 신고</li>
+                                        <li>개선 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                    </ul>
+                                </div>
+                                <div class="sort-wrap">
+                                    <div class="select-wrap">
+                                        <select>
+                                            <option value="">댓글 많은 순</option>
+                                            <option value="">최신 순</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="commentList-wrap">
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">개선 제안</div>
+                                                <p>서비스 개선에 대한 의견을 드립니다. AI기능이 추가되면 좋겠어요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>2</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                        <div class="replyList-wrap">
+                                            <div class="reply-item">
+                                                <div class="write-info">
+                                                    <div class="user">@Hayden</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">1시간 전</div>
+                                                </div>
+                                                <div class="reply-cont">
+                                                    <p>AI 찬성이요</p>
+                                                </div>
+                                                <div class="etc-info">
+                                                    <div class="like">
+                                                        <dl> <!-- on 추가시 하트 색 변경 -->
+                                                            <dt></dt>
+                                                            <dd>4</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="edit-wrap">
+                                                        <button class="btn-edit"></button>
+                                                        <div class="edit-popup-wrap">
+                                                            <button>신고하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-showAll-wrap">
+                                            <button class="btn-comment-showAll">댓글 모두보기</button>
+                                        </div>
+                                    </div>
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">콘텐츠 제안</div>
+                                                <p>호텔 체크인할 때 신용카드 deposit에 대해 주고 받는 상황 대화 만들어주세요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>0</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 답변 완료 -->
+                            <div class="tabCont">
+                                <div class="categoryList">
+                                    <ul>
+                                        <li class="on">전체</li> <!-- 활성화 on -->
+                                        <li>오류 신고</li>
+                                        <li>개선 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                        <li>콘텐츠 제안</li>
+                                    </ul>
+                                </div>
+                                <div class="sort-wrap">
+                                    <div class="select-wrap">
+                                        <select>
+                                            <option value="">댓글 많은 순</option>
+                                            <option value="">최신 순</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="commentList-wrap">
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">개선 제안</div>
+                                                <p>서비스 개선에 대한 의견을 드립니다. AI기능이 추가되면 좋겠어요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="manager-comment-wrap">
+                                                <div class="write-info">
+                                                    <div class="user">@운영자</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">2021.12.31</div>
+                                                </div>
+                                                <div class="manager-comment">
+                                                    <p>좋은 제안 주셔서 감사드립니다.<br>LISA Lab에 먼저 기능을 구현 후 정식기능으로 오픈하겠습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl class="on"> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>2</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                        <div class="replyList-wrap">
+                                            <div class="reply-item">
+                                                <div class="write-info">
+                                                    <div class="user">@Hayden</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">1시간 전</div>
+                                                </div>
+                                                <div class="reply-cont">
+                                                    <p>AI 찬성이요</p>
+                                                </div>
+                                                <div class="etc-info">
+                                                    <div class="like">
+                                                        <dl> <!-- on 추가시 하트 색 변경 -->
+                                                            <dt></dt>
+                                                            <dd>4</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="edit-wrap">
+                                                        <button class="btn-edit"></button>
+                                                        <div class="edit-popup-wrap">
+                                                            <button>신고하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-showAll-wrap">
+                                            <button class="btn-comment-showAll">댓글 모두보기</button>
+                                        </div>
+                                    </div>
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">콘텐츠 제안</div>
+                                                <p>호텔 체크인할 때 신용카드 deposit에 대해 주고 받는 상황 대화 만들어주세요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="manager-comment-wrap">
+                                                <div class="write-info">
+                                                    <div class="user">@운영자</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">2021.12.31</div>
+                                                </div>
+                                                <div class="manager-comment">
+                                                    <p>좋은 제안 주셔서 감사드립니다.<br>LISA Lab에 먼저 기능을 구현 후 정식기능으로 오픈하겠습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl class="on"> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>2</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                        <div class="replyList-wrap">
+                                            <div class="reply-item">
+                                                <div class="write-info">
+                                                    <div class="user">@Hayden</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">1시간 전</div>
+                                                </div>
+                                                <div class="reply-cont">
+                                                    <p>AI 찬성이요</p>
+                                                </div>
+                                                <div class="etc-info">
+                                                    <div class="like">
+                                                        <dl> <!-- on 추가시 하트 색 변경 -->
+                                                            <dt></dt>
+                                                            <dd>4</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="edit-wrap">
+                                                        <button class="btn-edit"></button>
+                                                        <div class="edit-popup-wrap">
+                                                            <button>신고하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-showAll-wrap">
+                                            <button class="btn-comment-showAll">댓글 모두보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 내 제안 -->
+                            <div class="tabCont">
+                                <div class="sort-wrap">
+                                    <div class="select-wrap">
+                                        <select>
+                                            <option value="">댓글 많은 순</option>
+                                            <option value="">최신 순</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="commentList-wrap">
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">개선 제안</div>
+                                                <p>서비스 개선에 대한 의견을 드립니다. AI기능이 추가되면 좋겠어요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl class="on"> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>2</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                        <div class="replyList-wrap">
+                                            <div class="reply-item">
+                                                <div class="write-info">
+                                                    <div class="user">@Hayden</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">1시간 전</div>
+                                                </div>
+                                                <div class="reply-cont">
+                                                    <p>AI 찬성이요</p>
+                                                </div>
+                                                <div class="etc-info">
+                                                    <div class="like">
+                                                        <dl> <!-- on 추가시 하트 색 변경 -->
+                                                            <dt></dt>
+                                                            <dd>4</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="edit-wrap">
+                                                        <button class="btn-edit"></button>
+                                                        <div class="edit-popup-wrap">
+                                                            <button>신고하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-showAll-wrap">
+                                            <button class="btn-comment-showAll">댓글 모두보기</button>
+                                        </div>
+                                    </div>
+                                    <div class="commentBox-wrap">
+                                        <div class="title-wrap">
+                                            <div class="title">
+                                                <div class="badge">콘텐츠 제안</div>
+                                                <p>호텔 체크인할 때 신용카드 deposit에 대해 주고 받는 상황 대화 만들어주세요.</p>
+                                            </div>
+                                            <div class="write-info">
+                                                <div class="user">@Hayden</div>
+                                                <div class="bar"></div>
+                                                <div class="date">1시간 전</div>
+                                            </div>
+                                            <div class="manager-comment-wrap">
+                                                <div class="write-info">
+                                                    <div class="user">@운영자</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">2021.12.31</div>
+                                                </div>
+                                                <div class="manager-comment">
+                                                    <p>좋은 제안 주셔서 감사드립니다.<br>LISA Lab에 먼저 기능을 구현 후 정식기능으로 오픈하겠습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="etc-info">
+                                                <div class="like">
+                                                    <dl class="on"> <!-- on 추가시 하트 색 변경 -->
+                                                        <dt></dt>
+                                                        <dd>4</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="commentCount">
+                                                    <dl>
+                                                        <dt></dt>
+                                                        <dd>2</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="edit-wrap">
+                                                    <button class="btn-edit"></button>
+                                                    <div class="edit-popup-wrap">
+                                                        <button>수정하기</button>
+                                                        <button>삭제하기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputReply-wrap">
+                                            <textarea placeholder="댓글을 입력해주세요."></textarea>
+                                            <div class="btn-wrap">
+                                                <button class="btn-reply-cancel">취소</button>
+                                                <button class="btn-reply-add">댓글</button>
+                                            </div>
+                                        </div>
+                                        <div class="replyList-wrap">
+                                            <div class="reply-item">
+                                                <div class="write-info">
+                                                    <div class="user">@Hayden</div>
+                                                    <div class="bar"></div>
+                                                    <div class="date">1시간 전</div>
+                                                </div>
+                                                <div class="reply-cont">
+                                                    <p>AI 찬성이요</p>
+                                                </div>
+                                                <div class="etc-info">
+                                                    <div class="like">
+                                                        <dl> <!-- on 추가시 하트 색 변경 -->
+                                                            <dt></dt>
+                                                            <dd>4</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="edit-wrap">
+                                                        <button class="btn-edit"></button>
+                                                        <div class="edit-popup-wrap">
+                                                            <button>신고하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-showAll-wrap">
+                                            <button class="btn-comment-showAll">댓글 모두보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <button class="btn-scrollTop"><span></span></button>           
+
+                </div> 
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>        
+
+        
+        // tab
+        document.querySelectorAll('.tabNav-wrap li').forEach(function(e, index){
+            e.addEventListener('click', function(){
+                e.parentNode.querySelectorAll('li').forEach(e => e.classList.remove('on'));
+                e.classList.add('on');
+
+                document.querySelector('.tabCont-wrap').scrollTop = 0;
+                document.querySelectorAll('.tabCont-wrap .tabCont').forEach(e => e.classList.remove('on'));
+                document.querySelectorAll('.tabCont-wrap .tabCont')[index].classList.add('on')
+            })
+        })
+
+        // 점3개 버튼 - 메뉴 오픈
+        document.querySelectorAll('.etc-info .edit-wrap .btn-edit').forEach(function(item){
+            item.addEventListener('click', function(){
+                this.parentNode.classList.toggle('on');
+            })
+        })
+
+        // 점3개 메뉴 팝업 - 다른 영역 클릭하면 닫히게
+        window.addEventListener('mouseup', function(e){
+            // close dropdown when clicked outside
+            document.querySelectorAll('.etc-info .edit-wrap .btn-edit').forEach(function(item){
+                if (!item.contains(e.target)){
+                    item.parentNode.classList.remove('on');
+                } 
+            })
+        })
+
+        // 댓글 textarea
+        document.querySelectorAll('.inputReply-wrap textarea').forEach(function(item){
+            item.addEventListener('focus', function(){
+                this.classList.add('on')
+            })
+
+            item.addEventListener('blur', function(){
+                var _val = this.value;
+                if(_val.length == 0 || _val.trim().length == 0){
+                    this.value = '';
+                    this.classList.remove('on')
+                }
+
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner header-l">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '핵심표현',
+				headerTitleText:'What if I make a mistake?'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="key-wrap">
+					<div class="typo-wrap">
+						<div class="balloon-text bottom on">방금 들은 문장을 따라 말해보세요.</div>
+						<div class="typo">
+							<span class="blank">What</span>
+							<span >if</span>
+							<span>I</span>
+							<span class="blank">make</span>
+							<span>a</span>
+							<span class="blank">mistake</span>
+							<span>?</span>
+						</div>
+					</div>
+					<div class="sub-text">내가 실수하면 어떡하지?</div>
+					<!-- D : 활성화 클래스 active || bg색 활성화 클래스 on -->
+					<div class="speaking-wrap">
+						<div class="balloon-text bottom on">AI가 목소리를 인식하면 물결이 움직여요</div>
+						<div class="ani-speaking on">
+							<span class="item"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+						</div>
+					</div>
+
+					<button type="button" class="btn-skip">skip <i class="icon"></i></button>
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'on'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

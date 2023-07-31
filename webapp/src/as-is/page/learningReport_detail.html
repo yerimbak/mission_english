@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container">
+                
+                <header class="bg-white">
+                    <button class="btn-back"><span></span></button>
+                    <div class="reportDetail-header">
+                        <p>AI Tutor 학습 리포트 (<span class="slideActive">1</span>/<span class="slideTotal">2</span>)</p>
+                        <div class="slideNav-wrap"></div>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="learningReportDetail">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reportDetail-wrap scrollWrap"> 
+                                        <div class="top-info-wrap">
+                                            <div class="title-wrap">
+                                                <div class="title-top">부모님 생신이 다가올 때</div>
+                                                <div class="title-btm">What are you going to get her?</div>
+                                            </div>            
+                                            <div class="time-wrap">
+                                                <dl>
+                                                    <dt>학습일시</dt>
+                                                    <dd>2020.08.04</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>학습시간</dt>
+                                                    <dd>15분</dd>
+                                                </dl>
+                                            </div>                    
+                                            <div class="grade-wrap">   
+                                                <div class="grade-score-wrap">
+                                                    <ul>
+                                                        <li class="on"></li> <!-- on 추가시 별에 불들어옴 -->
+                                                        <li class="on"></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="similarity-wrap">
+                                                    <div class="progress-wrap">
+                                                        <p>Final Review 답변 유사도</p>
+                                                        <div class="similarity-progress-wrap">
+                                                            <div class="progress-wrap bar-color"> <!-- bar-color 추가시 색깔 있는 프로그래스바 -->
+                                                                <div class="progress-bg"></div>
+                                                                <div class="bar" style="width:75%"><div class="bar-point">75</div></div>
+                                                            </div>
+                                                            <div class="grade-standard-wrap">
+                                                                <span class="grade-good">Good</span>
+                                                                <span class="grade-excellent">Excellent</span>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="progress-wrap">
+                                                        <p>Mission Dialogue 답변 유사도</p>
+                                                        <div class="similarity-progress-wrap">
+                                                            <div class="progress-wrap">
+                                                                <div class="progress-bg"></div>
+                                                                <div class="bar" style="width:50%"><div class="bar-point">50</div></div>
+                                                            </div>
+                                                            <div class="grade-standard-wrap">
+                                                                <span class="grade-good">Good</span>
+                                                                <span class="grade-excellent">Excellent</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="q-detail-wrap">                                                        
+                                            <p class="des"><strong>각 질문에 대한 나의 답변 유사도를 확인해보세요.</strong>말풍선을 선택하면 음성리뷰 가능합니다.</p>
+                                            <div class="q-item-wrap">
+                                                <div class="q-title">
+                                                    <span>Q1</span>
+                                                </div>                                                                        
+                                                <div class="q-box-wrap">
+                                                    <div class="box">
+                                                        <span>1st</span>                                                                    
+                                                        <div class="guide-box-wrap">
+                                                            <p>배고프다 말하고, Michelle도 그런지 물어보세요. 배고프다 말하고, Michelle도 그런지 물어보세요.</p>
+                                                        </div>    
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home sadf Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>2nd</span>
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>100</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>Final</span>
+                                                        <div class="inner">
+                                                            <p>I’m hungry, Aren’t you?</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="correct-box-wrap">
+                                                    <span>모범</span>
+                                                    <p>I’m hungry, How about you? I’m hungry, How about you?</p>
+                                                </div>
+                                            </div>
+                                            <div class="q-item-wrap">
+                                                <div class="q-title">
+                                                    <span>Q2</span>
+                                                    <p>I’m fine, actually. I already had breakfast.I’m fine, actually. I already had breakfast.</p>
+                                                </div>                            
+                                                <div class="q-box-wrap">
+                                                    <div class="box">
+                                                        <span>1st</span>
+                                                        <div class="guide-box-wrap">
+                                                            <p>배고프다 말하고, Michelle도 그런지 물어보세요.</p>
+                                                        </div>        
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>2nd</span>
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>Final</span>
+                                                        <div class="inner">
+                                                            <p>I’m hungry, Aren’t you?</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="correct-box-wrap">
+                                                    <span>모범</span>
+                                                    <p>I’m hungry, How about you?</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reportDetail-wrap scrollWrap"> 
+                                        <div class="top-info-wrap">
+                                            <div class="title-wrap">
+                                                <div class="title-top">부모님 생신이 다가올 때2</div>
+                                                <div class="title-btm">What are you going to get her2?</div>
+                                            </div>            
+                                            <div class="time-wrap">
+                                                <dl>
+                                                    <dt>학습일시</dt>
+                                                    <dd>2020.08.04</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>학습시간</dt>
+                                                    <dd>15분</dd>
+                                                </dl>
+                                            </div>                    
+                                            <div class="grade-wrap">   
+                                                <div class="grade-score-wrap">
+                                                    <ul>
+                                                        <li class="on"></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="similarity-wrap">
+                                                    <div class="progress-wrap">
+                                                        <p>Final Review 답변 유사도</p>
+                                                        <div class="similarity-progress-wrap">
+                                                            <div class="progress-wrap bar-color"> <!-- bar-color 추가시 색깔 있는 프로그래스바 -->
+                                                                <div class="progress-bg"></div>
+                                                                <div class="bar" style="width:75%"><div class="bar-point">75</div></div>
+                                                            </div>
+                                                            <div class="grade-standard-wrap">
+                                                                <span class="grade-good">Good</span>
+                                                                <span class="grade-excellent">Excellent</span>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="progress-wrap">
+                                                        <p>Mission Dialogue 답변 유사도</p>
+                                                        <div class="similarity-progress-wrap">
+                                                            <div class="progress-wrap">
+                                                                <div class="progress-bg"></div>
+                                                                <div class="bar" style="width:50%"><div class="bar-point">50</div></div>
+                                                            </div>
+                                                            <div class="grade-standard-wrap">
+                                                                <span class="grade-good">Good</span>
+                                                                <span class="grade-excellent">Excellent</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="q-detail-wrap">                                                        
+                                            <p class="des"><strong>각 질문에 대한 나의 답변 유사도를 확인해보세요.</strong>말풍선을 선택하면 음성리뷰 가능합니다.</p>
+                                            <div class="q-item-wrap">
+                                                <div class="q-title">
+                                                    <span>Q1</span>
+                                                </div>                                                                        
+                                                <div class="q-box-wrap">
+                                                    <div class="box">
+                                                        <span>1st</span>                                                                    
+                                                        <div class="guide-box-wrap">
+                                                            <p>배고프다 말하고, Michelle도 그런지 물어보세요. 배고프다 말하고, Michelle도 그런지 물어보세요.</p>
+                                                        </div>    
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home sadf Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>2nd</span>
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>100</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>Final</span>
+                                                        <div class="inner">
+                                                            <p>I’m hungry, Aren’t you?</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="correct-box-wrap">
+                                                    <span>모범</span>
+                                                    <p>I’m hungry, How about you? I’m hungry, How about you?</p>
+                                                </div>
+                                            </div>
+                                            <div class="q-item-wrap">
+                                                <div class="q-title">
+                                                    <span>Q2</span>
+                                                    <p>I’m fine, actually. I already had breakfast.I’m fine, actually. I already had breakfast.</p>
+                                                </div>                            
+                                                <div class="q-box-wrap">
+                                                    <div class="box">
+                                                        <span>1st</span>
+                                                        <div class="guide-box-wrap">
+                                                            <p>배고프다 말하고, Michelle도 그런지 물어보세요.</p>
+                                                        </div>        
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>2nd</span>
+                                                        <div class="inner">
+                                                            <p>Hello Jack do you calling to home</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box">
+                                                        <span>Final</span>
+                                                        <div class="inner">
+                                                            <p>I’m hungry, Aren’t you?</p>
+                                                            <span class="percent"><strong>90</strong>%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="correct-box-wrap">
+                                                    <span>모범</span>
+                                                    <p>I’m hungry, How about you?</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+
+                </div> 
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>                
+        var swiper = new Swiper('#learningReportDetail .swiper-container', {
+            autoHeight: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 16,
+            loop: false,
+            pagination: {
+                el: '.reportDetail-header .slideNav-wrap'
+            },
+            on: {
+                init: function(){
+                    document.querySelector('.reportDetail-header .slideTotal').textContent = this.slides.length;
+                },
+                slideChangeTransitionStart: function(){
+                    document.querySelector('.reportDetail-header .slideActive').textContent = this.activeIndex + 1;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

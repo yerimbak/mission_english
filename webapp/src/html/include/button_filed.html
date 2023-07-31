@@ -1,0 +1,26 @@
+<div class="input-wrap @@if(context.className){@@className}">
+  <!-- 
+    유효성 검사 완료 시 class="is-success",
+    실패시 class="is-invalid"
+  -->
+  @@if(context.label){
+  <label class="label @@if(context.labelclassName){@@labelclassName}">@@label @@if(context.required){<span class="required">필수입력</span>}</label>
+  }
+  <div class="input-wrap is-group">
+    <div class="contorl is-expanded">
+      <input type="@@inputType" @@if(context.placeholder){placeholder="@@placeholder"}  @@if(context.readonly){readonly="readonly"}  @@if(context.value){value="@@value"}>
+      <button class="btn-txt-delete">전체삭제</button>
+      <i class="icon-success"></i>
+    </div>
+    <div class="contorl">
+      @@if(context.btnText){<button class="button is-mid @@if(context.btnclassName){@@btnclassName}" type="button" @@if(context.buttonDisabled){disabled="disabled" }>@@btnText</button>} 
+    </div>
+  </div>
+
+  @@if(context.time){
+    <span class="time">@@time</span>
+    }
+  @@if(context.invalid){
+    <span class="invalid-txt">@@invalid</span>
+    }
+</div>

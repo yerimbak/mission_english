@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: 'AI음성 인식율 설정',
+				headerTitleText:'',
+        save: 'true',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission type-full bg-gray">
+				<div class="settingWrap">
+          <ul class="radiolist">
+            <li>
+              <div class="item">
+                <label class="radiobox" for="ai-1">
+                  <input type="radio" id="ai-1" name="ai">
+                  <i></i>
+                  <p class="title">음성 인식율 낮음</p>
+                  <p class="m-txt">기초 단어를 사용하여 발화</p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <label class="radiobox" for="ai-2">
+                  <input type="radio" id="ai-2" name="ai">
+                  <i></i>
+                  <p class="title">음성 인식율 보통</p>
+                  <p class="m-txt">의미 부합 단어를 사용하여 발화</p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <label class="radiobox" for="ai-3">
+                  <input type="radio" id="ai-3" name="ai">
+                  <i></i>
+                  <p class="title">음성 인식율 높음</p>
+                  <p class="m-txt">문법에 맞는 정확한 문장 발화</p>
+                </label>
+              </div>
+            </li>
+          </ul>
+				</div>
+			</div>
+
+      <!-- tost popup -->
+      <div class="alert-box is-visible">
+        <p>
+          AI음성 인식율 설정이 완료되었어요.
+        </p>
+      </div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

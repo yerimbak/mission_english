@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '실전대화',
+				headerTitleText:'What do you do after work?'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="speaking-wrap">
+					<!-- 발화전 -->
+					<!-- D : 활성화 클래스 active  ||  발화전 화면 trigger 클래스 추가 -->
+					<div class="speaking-box trigger active">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="title">HI, Grace</div>
+								<!-- D : 툴팁 활성화 클래스 on -->
+								<!-- 220610 : bottom 클래스 추가 -->
+								<div class="balloon-text bottom on">아래 문장을 말하고 대화를 시작해 보세요.</div>
+							</div>
+							<div class="progress-bar" data-timer="5" data-progress="eventStart">
+								<span class="bar" ></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<!-- 220610 : bottom 클래스 제거 -->
+							<div class="balloon-text on">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 마이크 활성화 on 클래스 || 움직임 클래스 active -->
+							<!-- D : pd1 ~ pd10  볼륨에따른 높이조절 -->
+							<div class="ani-speaking ">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+						</div>
+					</div>
+					<!-- //발화전 -->
+				</div>
+		
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+<script>
+
+	// moveDialogPosition  : 다이어로그 ing 클래스 찾아서 스크롤탑 해주는 이벤트, *페이지내 ing 클래스 한개만 사용
+	const moveDialogPosition=()=>{
+		const $ingDialog = document.querySelector('.dialog-box.ing');
+		const ingDialogTop = $ingDialog.offsetTop;
+		const $missionContent = document.querySelector('.content.type-mission');
+		const $tabArea = document.querySelector('.tab-area');
+		const $headerH = document.querySelector('.header.type-mission').offsetHeight; // 220525 변수 추가
+		// 220525 변경  120 -> 138 -> ($headerH + 45)
+		$missionContent.style.height = ingDialogTop - 138 + window.innerHeight + 'px';
+		window.scrollTo({top:ingDialogTop - 138, behavior:"smooth"});
+		setTimeout(function(){
+			$tabArea.classList.add('show')
+		},300)
+	
+	}
+	// setContentHauto : moveDialogPosition() 이후 동적으로 밑에 내용이 더 생겨서 bg가 지워지는경우 setContentHauto() 이벤트로 높이값 100% 다시 설정
+	const setContentHauto=()=>{
+	const $missionContent = document.querySelector('.content.type-mission');
+	$missionContent.style.height = '100%'
+	}
+</script>
+</html>

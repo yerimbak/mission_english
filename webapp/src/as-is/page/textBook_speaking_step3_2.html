@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="textBookContainer">
+
+                <header>
+                    <button class="btn-back"><span></span></button>
+                    <div class="desc">모범 답변과 비교해보세요.</div>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="speaking_practiceReivew">
+                        <div class="review-slide-wrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="swipeItem-box">
+                                            <div class="step-guide-wrap">
+                                                <div class="box-wrap turn-ai">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">True. Actually, I woke up shivering in the middle of the night. I wish I were on a tropical island.</div>
+                                                            <div class="btm-text">맞아, 사실, 나도 한밤중에 덜덜 떨다가 잠에서 깼어. 무슨 열대 섬 같은 데 있었으면 좋겠다.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">AI</div>
+                                                </div>
+                                                <div class="box-wrap turn-my">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Yeah, me too. Even if put on, even if you only in the winter in the winter time.</div>
+                                                            <div class="btm-text">82%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">You</div>
+                                                </div>
+                                                <div class="box-wrap turn-answer">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Yeah, me too. Even if only during the winter time.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">정답</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swipeItem-box">
+                                            <div class="step-guide-wrap">
+                                                <div class="box-wrap turn-ai">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Why don’t you make T-bone steak?</div>
+                                                            <div class="btm-text">좋은 생각이라고 말해 보세요.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">AI</div>
+                                                </div>
+                                                <div class="box-wrap turn-my">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Why don’t you make T-bone steak?</div>
+                                                            <div class="btm-text">82%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">You</div>
+                                                </div>
+                                                <div class="box-wrap turn-answer">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">that is a good idea.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">정답</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swipeItem-box">
+                                            <div class="step-guide-wrap">
+                                                <div class="box-wrap turn-ai">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Why don’t you make T-bone steak?</div>
+                                                            <div class="btm-text">좋은 생각이라고 말해 보세요.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">AI</div>
+                                                </div>
+                                                <div class="box-wrap turn-my">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">Why don’t you make T-bone steak?</div>
+                                                            <div class="btm-text">82%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">You</div>
+                                                </div>
+                                                <div class="box-wrap turn-answer">
+                                                    <div class="box">
+                                                        <div class="text-wrap">
+                                                            <div class="top-text">that is a good idea.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="badge">정답</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="function-slide-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="footer-btn-wrap">
+                            <button class="btn-orangeLine">재도전</button>
+                            <button class="btn-orange">다음</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>    
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>  
+        createSlide();
+
+        // 슬라이드 생성
+        function createSlide() {
+            var swiper = new Swiper('.review-slide-wrap > .swiper-container', {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 18,
+                loop: false,
+                pagination: {
+                    el: '.review-slide-wrap .function-slide-pagination'
+                },
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '알림설정',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission">
+				<div class="setting-edit">
+          <ul class="push-list">
+            <li>
+              <p class="tit">마케팅 정보 알림</p>
+              <span class="switch">
+                <input type="checkbox" name="sSwitch" id="sSwitch1" value="">
+                <label for="sSwitch1"></label>
+              </span>
+            </li>
+            <li>
+              <p class="tit">서비스 혜택 정보알림</p>
+              <span class="switch">
+                <input type="checkbox" name="sSwitch" id="sSwitch2" value="">
+                <label for="sSwitch2"></label>
+              </span>
+            </li>
+          </ul>
+          <p class="refer-txt">※ 서비스 이용과 관련된 정보성 메세지의 경우 수신동의 여부와 관계없이 발송됩니다.</p>
+        </div>
+			</div>
+    
+      
+      <div class="bg-dim modal" style="display: block;"></div>
+      <div class="modal-wrap type-alert size-xs show">
+        <div class="content">
+          <div class="title">마케팅 정보 수신 동의 철회</div>
+          <div class="sub-text">
+            전송자 : 미션잉글리시<br>
+            처리일자 : YYYY년 M월 D일<br>
+            처리내용 : 앱 푸시 수신거부 처리완료
+          </div>
+        </div>
+        <button class="button is-light w-100" onclick="modalClose()">확인</button>
+      </div>
+
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

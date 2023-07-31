@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '음성인식 테스트',
+      headerTitleText:''
+      })
+      <div class="content type-mission bg-gray">
+        <div class="onboardingWrap voice-test">
+          <div class="typo-wrap">
+            <!-- D : 말풍선 활성화 클래스 on -->
+            <div class="balloon-text bottom on primary">이렇게 들리네요</div>
+            <div class="typo color-01">
+              Nice To much
+            </div>
+          </div>
+          <div class="result-box">
+            <div class="text-wrap">
+              음성인식이 잘 되지 않았어요.<br>
+              발음에 좀 더 신경써서 말해주세요!
+            </div>
+            <div class="list-wrap">
+              <div class="item">
+                <span class="ico headset"></span>
+                <span class="txt primary">모범 답안 듣기</span>
+              </div>
+              <div class="item score">
+                <span class="txt">내 점수</span>
+                <span class="txt primary score">72점</span>
+              </div>
+              <div class="item">
+                <span class="ico my"></span>
+                <span class="txt primary">내 답변 듣기</span>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <button class="button is-full is-light">다음</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+</html> 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container">
+                
+                <header class="bg-white">
+                    <button class="btn-back"><span></span></button>
+                    <p class="centerText">LISA LAB</p>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="lisaLab">
+
+                    </div>  
+
+                    <button class="btn-scrollTop"><span></span></button>           
+
+                </div> 
+
+            </div>
+
+            <div class="popup_utterance">
+                <div class="inner">
+                    <div class="utterance-learning-wrap">
+                        <div class="bg-wrap">
+                            <div class="bg" style="background-image:url('../img/bg_utterance_learning.png')"></div> <!-- 백그라운드 이미지는 인라인 스타일로 -->
+                        </div>
+                        <div class="title-wrap">
+                            <div class="title">음성인식 테스트</div>
+                        </div>
+                        <div class="learning-cont-wrap">
+                            <p class="desc">이렇게 들리네요.</p>
+                            <div class="learning-wrap">
+                                <div class="listen-text">
+                                    <p>Nice to much</p>
+                                </div>
+                            </div>
+                            <div class="learning-footer-wrap">
+                                <div class="footer-counter">
+                                    <span></span>
+                                </div>
+                                <div id="invoke-wrap">
+                                    <div class="inner">
+                                        <ul class="ready talking">
+                                            <!-- ready 추가시 활성화 // loading 추가시 로딩 // waiting 추가시 녹음버튼 // ready + talking 발화모션 // more 한번 더 말하기 -->
+                                            <li class="dot dot1"></li>
+                                            <li class="dot dot2"></li>
+                                            <li class="dot dot3"></li>
+                                            <li class="dot dot2"></li>
+                                            <li class="dot dot1"></li>
+                                            <li class="loading-li">
+                                                <div class="loading-icon"></div>
+                                            </li>
+                                            <li class="waiting-li">
+                                                <div class="waiting-icon"></div>
+                                            </li>
+                                            <li class="more-li">
+                                                <img src="../img/icon_invoke_more.gif" alt="">
+                                                <p>여기를 터치하면 추가로 녹음할 수 있어요</p>
+                                            </li>
+                                        </ul>
+                                        <p class="text-listening">I’m Listening...</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="btm-score-wrap on"> <!-- on 추가시 활성화 -->
+                            <div class="title">Google 음성인식이 잘 되지 않았어요.<br>발음에 좀 더 신경써서 말해주세요!</div>
+                            <div class="score-mid-wrap">
+                                <div class="listen-btn-wrap">
+                                    <button class="btn-modelAnswer">
+                                        <div class="icon"></div>
+                                        <p>모범 답안 듣기</p>
+                                    </button>
+                                </div>
+                                <div class="score-wrap">
+                                    <span>내 점수</span>
+                                    <strong>72점</strong>
+                                </div>
+                                <div class="listen-btn-wrap">
+                                    <button class="btn-myAnswer">
+                                        <div class="icon"></div>
+                                        <p>내 답변 듣기</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="btm-btn-wrap">
+                                <button class="btn-orange">미션잉글리시 시작하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script> 
+
+    </script>
+</body>
+</html>

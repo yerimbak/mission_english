@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '미치도록 말하고 싶다',
+      headerTitleText:''
+      })
+      <div class="content bg-white">
+        <div class="recommend-list-wrap">
+          <ul>
+            <li>
+              <div class="banner-wrap">
+                <div class="bannerImg-wrap">
+                  <div class="bannerImg-dimm"></div>
+                  <div class="bannerImg-dimm2"></div>
+                  <div class="bannerImg" style="background-image:url('../img/banner_recommend_1.png');"></div>
+                </div>
+                <div class="banner-center-wrap">
+                  <div class="banner-top">미치도록 말하고 싶다: 3탄</div>
+                  <div class="banner-text-wrap">
+                    <div class="top-text">“라면 먹고 갈래” 영어로?</div>
+                    <div class="btm-text">Do you like ramen (?)</div>
+                  </div>
+                  <div class="banner-btn-wrap">
+                    <button class="btn-learn">학습하기</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="banner-wrap">
+                <div class="bannerImg-wrap">
+                  <div class="bannerImg-dimm"></div>
+                  <div class="bannerImg-dimm2"></div>
+                  <div class="bannerImg" style="background-image:url('../img/banner_recommend_2.png');"></div>
+                </div>
+                <div class="banner-center-wrap">
+                  <div class="banner-top">미치도록 말하고 싶다: 2탄</div>
+                  <div class="banner-text-wrap">
+                    <div class="top-text">“취향저격” 원어민은<br>어떻게 말할까?</div>
+                  </div>
+                  <div class="banner-btn-wrap">
+                    <button class="btn-learn">학습하기</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="banner-wrap">
+                <div class="bannerImg-wrap">
+                  <div class="bannerImg-dimm"></div>
+                  <div class="bannerImg-dimm2"></div>
+                  <div class="bannerImg" style="background-image:url('../img/banner_recommend_3.png');"></div>
+                </div>
+                <div class="banner-center-wrap">
+                  <div class="banner-top">미치도록 말하고 싶다: 1탄</div>
+                  <div class="banner-text-wrap">
+                    <div class="top-text">“알딸딸해” 뭐라고 할까요?</div>
+                    <div class="btm-text">little bit drunk.</div>
+                  </div>
+                  <div class="banner-btn-wrap">
+                    <button class="btn-learn">학습하기</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button type="button" class="btn-top">top</button>
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+
+</html>

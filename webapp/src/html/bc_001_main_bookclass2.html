@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('./include/header.html', {
+				headerKeyTitle: '상세보기',
+				headerTitleText:'',
+				bookclassUtil: 'on'
+			})
+			<div class="modal-subscribe">
+				<button type="button" class="btn-subscribe"><span>구독 취소하기</span></button>
+			</div>
+			<div class="content type-flex bg-white">
+				<div class="bookclass-detail type2">
+					<div class="book-info-wrap">
+						<div class="title-wrap">
+							<div class="flex-wrap">
+								<div class="flex-item image-wrap">
+									<img src="../img/main/bookclass-detail_01.png" alt="sample-book">
+								 </div>
+								<div class="flex-item">
+									<div class="title-wrap-header">
+										<div class="label-wrap">
+											<span class="label color-01">회화</span>
+											<span class="label color-02">초급</span>
+										</div>
+										<div class="memeber-info">
+											<span>2000</span>명 학습중
+										</div>
+									</div>
+									<div class="title">
+										김태연의 이지 잉글리시 김태연의 이지 잉글 두줄일 때 글자 공백포함 40자 들어 공백포함 40자 들어 공백포함 40자 들어
+									</div>
+									<div class="sub-text-wrap">
+										<span class="sub-text">김태연 지음</span>
+										<span class="sub-text">EBS BOOKS</span>
+										<span class="sub-text">2020년 10월</span>
+									</div>
+								</div>
+							</div>
+							<div class="toggle-info">
+								출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출.
+							</div>
+							<div class="score-wrap">
+								<div class="result-bar">
+									<div class="bar" style="width:84%">
+										<span>84%</span>
+									</div>
+								</div>
+								<div class="info-bot">
+									<div class="sub-text">22.03.31~22.12.31</div>
+									<div class="num"><strong>25</strong>/150</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="book-index-wrap type2">
+							<div class="book-index-title">
+								<div class="title">목차(150)</div>
+								<!-- 20220915 추가 : 검색 -->
+								<div class="search-area">
+									<input type="text" placeholder="제목 검색">
+									<button type="button" class="btn-del"></button>
+								</div>
+								<button type="button" class="btn-search"></button>
+							</div>
+							<ul class="book-index-list">
+								<!-- D : 진행율 4단계 : 수정 20220916 -->
+								<li class="book-index-item step-finish">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-4">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-3">
+									<a href="#none">
+										<div class="title">친환경 제품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다</div>
+										<div class="text">This is biodegradeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함 31자 들어갑니다.최대 2줄 까지 들어가요</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-2">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-1">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<!-- D : 20220915 3단계 진행율 추가 :  step1~step3 -->
+								<li class="book-index-item step-finish">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-2-3">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-2-2">
+									<a href="#none">
+										<div class="title">친환경 제품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다</div>
+										<div class="text">This is biodegradeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함 31자 들어갑니다.최대 2줄 까지 들어가요</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-2-1">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-1">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item step-1-1">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사 때 인사 때 인사 때 인사 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item lock">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow you tomorrow you tomorrow you tomorrow you tomorrow you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item lock">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="btn-more"> <span>더보기</span> </button>
+					</div>
+				</div>
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+<script>
+	// 출판사 토글 이벤트
+	document.querySelector('.toggle-info').addEventListener('click', function(e){
+		if (e.target.classList.contains('on')) {
+			e.target.classList.remove('on')
+		} else {
+			e.target.classList.add('on')
+		}
+	})
+	// 목차 검색
+	document.querySelector('.book-index-title .btn-search').addEventListener('click', function(e){
+		if (document.querySelector('.search-area').classList.contains('show')) {
+			document.querySelector('.search-area').classList.remove('show');
+		} else {
+			document.querySelector('.search-area').classList.add('show');
+			document.querySelector('.search-area input').focus();
+		}
+	})
+	// 목차 검색 del
+	document.querySelector('.book-index-title .btn-del').addEventListener('click', function(e){
+		document.querySelector('.book-index-title input').value = '';
+		document.querySelector('.search-area').classList.remove('show');
+	});
+
+	// 상세보기 유틸버튼 이벤트
+	document.querySelector('.bookclass-util').addEventListener('click', function(e){
+		if (document.querySelector('.modal-subscribe').classList.contains('on')) {
+			document.querySelector('.modal-subscribe').classList.remove('on');
+		} else {
+			document.querySelector('.modal-subscribe').classList.add('on');
+		}
+		
+	})
+
+	//  구독취소하기 버튼 이벤트
+	document.querySelector('.btn-subscribe').addEventListener('click', function(e){
+		document.querySelector('.modal-subscribe').classList.remove('on');
+	})
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '학습 목적 설정',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission">
+				<div class="onboardingWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							닉네임을 설정해주세요.
+						</h3>
+            <p class="h-txt">
+              닉네임은 언제든 바꿀 수 있어요!
+            </p>
+					</div>
+
+					@@include('../include/default_filed.html', {
+						label: '아이디(이메일)',
+						inputType: 'text',
+						placeholder: 'Hayden'
+					})
+
+					<div class="btn-wrap is-fixed">
+						<button class="button is-full is-light">저장</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

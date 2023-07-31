@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('./include/header.html', {
+				headerKeyTitle: '헤더',
+                headerTitleText:'헤더 서브텍스트'
+			})
+			<div class="content type-mission bg-gray">
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 북클래스 필터 -->
+            <div class="bg-dim"></div>
+
+            <!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

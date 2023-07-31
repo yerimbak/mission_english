@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no viewport-fit=cover">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper-bundle-ms.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css"> <!-- 메인 -->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/layout_new.css">
+    <title>Document</title>
+</head>
+
+<body ontouchstart="">
+	<div id="app">
+		<div class="app-inner">
+			<div id="container" class="splash-wrap">
+        <div id="splash">
+
+        </div>
+			</div>
+		</div>
+	</div>
+  <!--bodymovin library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script>
+    var anmation = bodymovin.loadAnimation({
+    container : document.getElementById('splash'),
+    renderer : 'svg',
+    loop : false,
+    autoplay : true,
+    Speed:0.7,
+    path: '../img/buttertime/bt_splash_motion.json'
+});
+  </script>
+</body>
+
+</html>

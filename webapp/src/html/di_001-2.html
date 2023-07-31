@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<header class="header type-mission">
+				<button type="button" class="btn btn-prev">뒤로가기</button>
+				<div class="title">Shall we have some dessert?</div>
+			</header>
+			<!-- 220512 .bg-gray 추가 -->
+			<div class="content type-mission bg-gray">
+				<div class="tab-area">
+					<div class="tab-wrap">
+						<span class="bg" style="left:66px"></span>
+						<button type="button" class="tab icon-speak">말하기 모드</button>
+						<button type="button" class="tab icon-listening on">듣기 모드</button>
+					</div>
+				</div>
+				
+				<!-- Tab : 말하기 모드 -->
+				<div class="tab-cont speaking-wrap">
+					<!-- 대화 시작 -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="speaking-box active">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="title">HI, Grace</div>
+								<!-- D : 툴팁 활성화 클래스 on -->
+								<div class="balloon-text on">위의 문장을 말하고 대화를 시작해 보세요.</div>
+							</div>
+							<div class="progress-bar" data-timer="5" data-progress="eventStart">
+								<span class="bar" style="width:0;"></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<div class="balloon-text bottom on">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 활성화 클래스 active  &&  speaking-box 활성화 된 상태 -->
+							<div class="ani-speaking active">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+						</div>
+					</div>
+					<!-- //대화 시작 -->
+
+					<!-- 대화 학생 -->
+					<div class="speaking-box" data-speakingBox="event01">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="question">일 끝나고 뭐해?</div>
+								<!-- D : 텍스트 확인 클래스 on -->
+								<div class="answer-wrap">
+									<!-- D : 단어 확인 클래스 on -->
+									<span>Me</span><span>too,</span><span>but</span><span>I</span><span>have</span><span class="on">room</span><span>for</span><span class="on">dessert.</span>
+								</div>
+								<div class="hint-wrap">
+									<button type="button" class="btn-hint">
+										힌트보기
+									</button>
+								</div>
+							</div>
+							<div class="progress-bar" data-timer="5" data-progress="event01">
+								<span class="bar" style="width:0;"></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box between">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<div class="balloon-text bottom on">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 활성화 클래스 active  -->
+							<div class="ani-speaking" data-speakingAni="event01">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn btn-reset" data-refresh="event01">새로고침</button>
+								<button type="button" class="btn btn-stop" data-playing="event01">멈춤</button> <!-- D : 활성화 클래스 on -->
+							</div>
+						</div>
+						<!-- favorit button -->
+						<button type="button" class="btn-bookmark">북마크</button>
+						<!-- skip button -->
+						<button type="button" class="btn-skip">skip <i class="icon"></i></button>
+					</div>
+					<!-- //대화 학생 -->
+
+
+
+					
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box on">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+
+					<!-- 말풍선 기본 | 유저 -->
+					<!-- <div class="dialog-box user">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div> -->
+					<!-- //말풍선 기본 -->
+					
+					<!-- 대화 학생 -->
+					<div class="speaking-box active" data-speakingBox="event02">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="question">일 끝나고 뭐해?</div>
+								<!-- D : 텍스트 확인 클래스 on -->
+								<div class="answer-wrap on">
+									<!-- D : 단어 확인 클래스 on -->
+									<span>Me</span><span>too,</span><span>but</span><span>I</span><span>have</span><span class="on">room</span><span>for</span><span class="on">dessert.</span>
+								</div>
+								<div class="hint-wrap">
+									<button type="button" class="btn-hint">
+										힌트보기
+									</button>
+									<div class="hint-box">
+										<div class="hint-item">What do</div>
+										<div class="hint-item">work</div>
+									</div>
+								</div>
+							</div>
+							<!-- D: active 클래스 추가하면서 moveProgressBar() 함수실행 |  data-timer="" ->  0.1~ x -->
+							<div class="progress-bar active" data-timer="2.32" data-progress="event02">
+								<!-- D: progress style="widht:XX%" 값으로 컨트롤 -->
+								<span class="bar" style="width:0"></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box between">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<div class="balloon-text bottom">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 활성화 클래스 active  -->
+							<div class="ani-speaking" data-speakingAni="event02">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn btn-reset" data-refresh="event02">새로고침</button>
+								<button type="button" class="btn btn-stop" data-playing="event02">멈춤</button>  <!-- D : 활성화 클래스 on -->
+							</div>
+						</div>
+						<!-- favorit button -->
+						<button type="button" class="btn-bookmark">북마크</button>
+						<!-- skip button -->
+						<button type="button" class="btn-skip">skip <i class="icon"></i></button>
+					</div>
+					<!-- //대화 학생 -->
+
+					<!-- 말풍선 기본 : ing -->
+					<div class="dialog-box on ing">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							<div class="ing-text">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<!-- //말풍선 : ing -->
+				</div>
+				<!-- //Tab : 말하기 모드 -->
+
+
+				<!-- Tab : 듣기 모드 -->
+				<div class="tab-cont listening-wrap on">
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							It’s almost over.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+
+					<!-- 대화 학생 -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="listening-box active">
+						<div class="text-wrap">
+							<!-- D : 활성화 클래스 on &&  .before에서 on 클래스 삭제 -->
+							<div class="before on">
+								<!-- D : 말풍선 활성화 클래스 on -->
+								<div class="balloon-text bottom on">영어로 생각해보세요</div>
+								너는 퇴근 후에 뭐해?
+							</div>
+							<!-- D : 활성화 클래스 on &&  .after에서 on 클래스 삭제 -->
+							<div class="after">
+								<span class="bar" style="width:10%;">What do you do after work?</span>
+								What do you do after work?
+							</div>
+						</div>
+					</div>
+					<!-- //대화 학생 -->
+
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="dialog-box on">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							It’s almost over.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+
+					<!-- 대화 학생 -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="listening-box active">
+						<div class="text-wrap">
+							<!-- D : 활성화 클래스 on &&  .before에서 on 클래스 삭제 -->
+							<div class="before">
+								<!-- D : 말풍선 활성화 클래스 on -->
+								<div class="balloon-text bottom on">영어로 생각해보세요</div>
+								너는 퇴근 후에 뭐해?
+							</div>
+							<!-- D : 활성화 클래스 on &&  .after에서 on 클래스 삭제 -->
+							<div class="after on">
+								<!-- D : 인라인 width 값으로 컨트롤 -->
+								<span class="bar" style="width:10%;">What do you do after work?</span>
+								What do you do after work?
+							</div>
+						</div>
+					</div>
+					<!-- //대화 학생 -->
+				</div>
+				<!-- //Tab : 듣기 모드 -->
+		
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'on'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

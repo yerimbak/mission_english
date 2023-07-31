@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '실전대화',
+				headerTitleText:'What do you do after work?'
+			})
+			<div class="content type-mission bg-gray">
+				<p class="text-gray">이제 녹음된 대화를 다시 들어보세요!</p>
+				<div class="listening-wrap">
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							It’s almost over.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+
+					<!-- 대화 학생 -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="listening-box">
+						<div class="text-wrap">
+							<!-- D : 활성화 클래스 on -->
+							<div class="before on">
+								What do you do after work?
+							</div>
+						</div>
+					</div>
+					<!-- //대화 학생 -->
+
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box on">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Do you usually go straight home?
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+
+					<!-- 대화 학생 -->
+					<!-- D : 활성화 클래스 active -->
+					<div class="listening-box active">
+						<div class="text-wrap">
+							<!-- D : 활성화 클래스 on -->
+							<div class="before on">
+								No, I don’t.
+							</div>
+							</div>
+						</div>
+					</div>
+					<!-- //대화 학생 -->
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+</html>

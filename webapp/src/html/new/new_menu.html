@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head.html')
+<link rel="stylesheet" href="../css/swiper-bundle.css">
+<link rel="stylesheet" href="../css/layout_new.css">
+
+<body ontouchstart="">
+  <div id="app" class="h-auto">
+    <div class="app-inner">
+
+      <div id="container" class="mainPage buttertime">
+
+        <header>
+          <h1 class="logo"><a href="#">버터타임</a></h1>
+          <button class="btn-menu2"><span></span></button>
+        </header>
+
+        <div id="menu2" class="menuOpen">
+          <!-- menuOpen 클래스 추가시 메뉴 보임 // 하단 스크립트 -->
+          <!-- on 클래스 추가시 보임 -->
+          <button class="btn-close on">닫기</button>
+          <div class="menu-wrap on">
+            <div class="user-info">
+              <div class="nickName">Hayden</div>
+              <span class="tag">내정보</span>
+              <div class="user">
+                <div class="name">김학생</div>
+                <div class="email">student@email.com</div>
+              </div>
+            </div>
+            <div class="user-data">
+              <div class="d-day">
+                <strong>D-365</strong>
+                학습완료 잔여일
+              </div>
+              <div class="statistics">
+                <div class="txt">
+                  <div class="title">완료 학습 수</div>
+                  <div class="count"><strong>79개</strong> <span>/</span> 300개</div>
+                </div>
+                <div class="bar">
+                  <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                  <div class="bar-active" style="width:80%"></div>
+                </div>
+                <div class="txt">
+                  <div class="title">누적 학습 시간</div>
+                  <div class="count"><strong>128분</strong> <span>/</span> 500분</div>
+                </div>
+                <div class="bar">
+                  <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                  <div class="bar-active" style="width:40%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="menu-list-wrap">
+              <div>
+                <ul class="menu-list01">
+                  <li class="menu01"><button><i></i>현재 차수 학습리스트</button></li>
+                  <li class="menu02"><button>북마크 목록</button></li>
+                </ul>
+                <ul class="menu-list02">
+                  <li class="menu03"><button>서비스 개선 제안
+                    </button></li>
+                  <li class="menu04"><button>공지사항</button></li>
+                  <li class="menu05"><button>쿠폰 등록</button></li>
+                  <li class="menu06"><button>설정</button></li>
+                </ul>
+              </div>
+              <div class="btm-wrap">
+                <button>오픈소스정보</button>
+                <button><strong>약관・개인정보처리방침</strong></button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bg on"></div> <!-- on 클래스 추가시 보임 -->
+        </div>
+
+        <div class="contents-wrap">
+          <div id="main" class="scrollWrap">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>오른쪽 상단 메뉴 클릭</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/new.js"></script>
+  <script>
+    // 메뉴 show
+    document.querySelector('header .btn-menu2').addEventListener('click', function () {
+      menuOpen();
+    })
+
+    // 메뉴 hide
+    document.querySelector('#menu2 .menu-bg').addEventListener('click', function () {
+      menuClose();
+    })
+    document.querySelector('#menu2 .btn-close').addEventListener('click', function () {
+      menuClose();
+    })
+    
+    function menuOpen(){
+      document.querySelector('#menu2').classList.add('menuOpen');
+
+      setTimeout(() => {
+        document.querySelector('#menu2 .btn-close').classList.add('on');
+        document.querySelector('#menu2 .menu-wrap').classList.add('on');
+        document.querySelector('#menu2 .menu-bg').classList.add('on');
+      }, 1);
+    }
+    function menuClose(){
+      document.querySelector('#menu2 .btn-close').classList.remove('on');
+      document.querySelector('#menu2 .menu-wrap').classList.remove('on');
+      document.querySelector('#menu2 .menu-bg').classList.remove('on');
+
+      setTimeout(() => {
+        document.querySelector('#menu2').classList.remove('menuOpen');
+      }, 500);
+    }
+  </script>
+</body>
+
+</html>

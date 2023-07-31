@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '실전대화',
+				headerTitleText:'What do you do after work?'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="speaking-wrap">
+					<!-- 대화 시작 -->
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+					<!-- 대화 학생 -->
+					<div class="speaking-box" data-speakingBox="event01">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="question">일 끝나고 뭐해1?</div>
+								<!-- D : 숨김처리 클래스 blank 추가 -->
+								<div class="answer-wrap blank">
+									<!-- D : 단어 확인 클래스 show -->
+									<span>Me</span><span>too,</span><span>but</span><span>I</span><span>have</span><span class="show">room</span><span>for</span><span class="show">dessert.</span>
+								</div>
+							</div>
+							<div class="progress-bar" data-timer="5" data-progress="event01">
+								<span class="bar" ></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<div class="balloon-text">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 활성화 클래스 active  -->
+							<div class="ani-speaking" data-speakingAni="event01">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+						</div>
+						<!-- favorit button -->
+						<button type="button" class="btn-bookmark">북마크</button>
+					</div>
+					<!-- //대화 학생 -->
+
+					<!-- //대화 말풍선 기본 -->
+					<!-- 대화 말풍선 기본 | 리사(default) -->
+					<div class="dialog-box on">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							Hey, Betty<br>I'm so full right now.
+						</div>
+					</div>
+					<!-- //대화 말풍선 기본 -->
+					
+					<!-- 대화 학생 -->
+					<div class="speaking-box active" data-speakingBox="event02">
+						<div class="speaking-item text-box">
+							<div class="title-box">
+								<div class="question">일 끝나 고 뭐해2고 뭐해2고 뭐해2고 뭐해2고 뭐해2  뭐해2고 뭐해2고 뭐해?</div>
+								<!-- D : 숨김처리 클래스 blank 추가 -->
+								<div class="answer-wrap">
+									<!-- D : 단어 확인 클래스 show -->
+									<span>Me</span><span class="show">too,</span><span>but</span><span class="show">I</span><span>have</span><span class="show">room</span><span>for</span>
+								</div>
+							</div>
+							<!-- D: active 클래스 추가하면서 moveProgressBar() 함수실행 |  data-timer="" ->  0.1~ x -->
+							<div class="progress-bar active" data-timer="5.8" data-progress="event02">
+								<span class="bar"></span>
+							</div>
+						</div>
+						<div class="speaking-item control-box">
+							<!-- D : 툴팁 활성화 클래스 on -->
+							<div class="balloon-text on">AI가 목소리를 인식하면 물결이 움직여요</div>
+							<!-- D : 활성화 클래스 active  -->
+							<!-- D : 볼륨관련 pd1~pd10 클래스로 컨트롤 -->
+							<!-- D : on 클래스 넣을시 스피킹 준비 상태 값  이후 active, pd1~10 값에 따라 스피킹 웨이브 -->
+							<div id="testChange" class="ani-speaking on active pd5" data-speakingAni="event02">
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+								<span class="item"></span>
+							</div>
+						</div>
+						<!-- favorit button -->
+						<button type="button" class="btn-bookmark on">북마크</button>
+					</div>
+					<!-- //대화 학생 -->
+
+					<!-- 말풍선 기본 : ing -->
+					<!-- 220516 : moveDialogPosition(), setContentHauto()  페이지 하단 스크립트 추가 -->
+					<div class="dialog-box on ing">
+						<img src="../img/icons/profile_01.png" class="profile">
+						<div class="text-wrap">
+							<div class="ing-text">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<!-- //말풍선 : ing -->
+				</div>
+		
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+<script>
+
+	// moveDialogPosition  : 다이어로그 ing 클래스 찾아서 스크롤탑 해주는 이벤트, *페이지내 ing 클래스 한개만 사용
+	const moveDialogPosition=()=>{
+		const $ingDialog = document.querySelector('.dialog-box.ing');
+		const ingDialogTop = $ingDialog.offsetTop;
+		const $missionContent = document.querySelector('.content.type-mission');
+		const $tabArea = document.querySelector('.tab-area');
+		const $headerH = document.querySelector('.header.type-mission').offsetHeight; // 220525 변수 추가
+		// 220525 변경  120 -> 138 -> ($headerH + 45)
+		$missionContent.style.height = ingDialogTop - 138 + window.innerHeight + 'px';
+		window.scrollTo({top:ingDialogTop - 138, behavior:"smooth"});
+
+		// 0520 추가 : 이동시 탭버튼 확인 추가
+		if ($tabArea){
+			setTimeout(function(){
+				$tabArea.classList.add('show')
+			},300)
+		}
+		
+	
+	}
+	// setContentHauto : moveDialogPosition() 이후 동적으로 밑에 내용이 더 생겨서 bg가 지워지는경우 setContentHauto() 이벤트로 높이값 100% 다시 설정
+	const setContentHauto=()=>{
+	const $missionContent = document.querySelector('.content.type-mission');
+	$missionContent.style.height = '100%'
+	}
+</script>
+</html>

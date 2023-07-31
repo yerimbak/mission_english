@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '약관동의',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission">
+				<div class="joinWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							이상범님, 반가워요!<br>
+							약관이 개정되어 <br>
+							동의 후 서비스 이용이 가능해요.
+						</h3>
+						
+            <p class="h-txt">
+              [선택] 항목의 경우, 동의하지 않더라도<br>
+              정상적인 서비스 이용이 가능합니다.
+            </p>
+					</div>
+					@@include('../include/agree_filed.html')
+					<div class="btn-wrap is-fixed">
+						<button class="button is-full is-light" disabled>약관에 동의합니다.</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 약관 팝업 -->
+	@@include('../include/terms_popup.html')  
+	@@include('../include/footer_js.html')
+</body>
+</html>

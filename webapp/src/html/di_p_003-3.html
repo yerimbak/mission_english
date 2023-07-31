@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('./include/header.html', {
+				headerKeyTitle: '연습대화 결과',
+				headerTitleText:'What do you do after work?'
+			})
+			<div class="content type-mission">
+				<div class="dialog-result">
+					<div class="score-wrap">
+						<div class="info-top">
+							<div class="title">GREAT</div>
+							<div class="star-wrap n1"></div> <!-- D : n1~n3  별1~별3개 활성화 클래스 , 클래스 없을시 0 -->
+						</div>
+						<div class="result-bar">
+							<div class="bar" style="width:84%">
+								<span>84</span>
+							</div>
+						</div>
+						<div class="info-bot">
+							<div class="sub-text">Speaking score</div>
+							<div class="num"><strong>84</strong>/100</div>
+						</div>
+					</div>
+					
+					<div class="dialog-review">
+						<div class="swiper-review-wrap">
+							<div class="title">Dialog Review</div>
+							<div class="swiper swiper-review">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="review-item">
+											<div class="dialog-box">
+												<img src="../img/icons/profile_01.png" class="profile">
+												<div class="text-wrap">
+													what do you usually do, then?
+												</div>
+											</div>
+											<!-- 내 답변이 없는경우 no-data 클래스 추가 -->
+											<div class="dialog-box type-me no-data">
+												<div class="text-wrap">
+													<div class="answer">
+														<div class="title-wrap">
+															<div class="txt">내 답변</div>
+														</div>
+														<div class="txt">
+															<!-- 답변 없는 경우 text no-data-text추가 -->
+															<span class="no-data-text">답변하지 않으셨네요.<br>모범 답변을 확인해볼가요?</span>
+														</div>
+													</div>
+													<div class="answer">
+														<div class="title-wrap">
+															<div class="txt">모범 답변</div>
+														</div>
+														<div class="txt">
+															<span>I</span><span>often</span><span>meet</span><span>a</span><span>friend</span><span>for</span><span>dinner</span>
+														</div>
+													</div>
+													<div class="answer-text">모범 답변과 <strong>100%</strong>일치해요</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="review-item">
+											<div class="dialog-box">
+												<img src="../img/icons/profile_02.png" class="profile">
+												<div class="text-wrap">
+													what do you usually do, then?  do you usually do, then?
+												</div>
+											</div>
+											<div class="dialog-box type-me">
+												<div class="text-wrap">
+													<div class="answer">
+														<div class="title-wrap">
+															<div class="txt">내 답변</div>
+														</div>
+														<div class="txt">
+															<span class="same">I</span><span>sometimes</span><span class="same">meet</span><span class="same">a</span><span class="same">friend</span><span class="same">for</span><span class="same">dinner</span>
+
+														</div>
+													</div>
+													<div class="answer">
+														<div class="title-wrap">
+															<div class="txt">모범 답변</div>
+														</div>
+														<div class="txt">
+															<span>I</span><span>often</span><span>meet</span><span>a</span><span>friend</span><span>for</span><span>dinner</span><span>friend</span><span>for</span><span>dinner</span>
+														</div>
+													</div>
+													<div class="answer-text">모범 답변과 <strong>95%</strong>일치해요</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-wrap type-shadow">
+						<button type="button" class="btn btn-link">다시 학습하기</button>
+					</div>
+					<div class="btn-wrap type-column">
+						<button type="button" class="btn btn-box color-sky">이어서 핵심표현 학습하기</button>
+						<div class="btn-wrap">
+							<a href="#none" class="btn btn-box color-gray">홈으로 가기</a>
+							<button type="button" class="btn btn-box color-gray">다른 주제 보기</button>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'on'
+				})
+			</div>
+
+			<!-- <button type="button" class="btn-top">top</button> -->
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+<script>
+	//swiper-review
+	var reviewSwiper = new Swiper('.swiper-review', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		observer: true,
+		observeParents: true,
+		pagination: {
+			el: '.swiper-review .swiper-pagination',
+		},
+	});
+</script>
+</html>

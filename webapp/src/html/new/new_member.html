@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '회원가입',
+				headerTitleText:'',
+        save: 'true',
+        className: 'is-active',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="member-edit">
+          @@include('../include/default_filed.html', {
+            className: 'is-success',
+            label: '아이디(이메일)',
+            inputType: 'text',
+            value: 'student@email.com',
+            readonly: 'true'
+            })
+          @@include('../include/default_filed.html', {
+            className: 'is-invalid',
+            label: '이름',
+            inputType: 'text',
+            value: '김학생',
+            placeholder: '이름 입력',
+            invalid: '최소 2자 이상 입력해 주세요.'
+            })
+          @@include('../include/default_filed.html', {
+            label: '닉네임',
+            inputType: 'text',
+            value: 'Hayden',
+            placeholder: '닉네임 입력',
+            invalid: '최소 2자 이상 입력해 주세요.'
+            })
+          @@include('../include/button_filed.html', {
+            label: '휴대폰 번호',
+            placeholder: '휴대폰 번호 (숫자만 입력)',
+            inputType: 'tel',
+            btnclassName: 'is-point',
+            btnText: '인증번호 요청',
+            invalid: '휴대폰 번호를 정확하게 입력해 주세요.'
+            })
+          @@include('../include/default_filed.html', {
+            className: 'is-success',
+            label: '비밀번호 재설정',
+            inputType: 'passwrord',
+            placeholder: '새 비밀번호'
+            })
+          @@include('../include/default_filed.html', {
+            inputType: 'passwrord',
+            placeholder: '새 비밀번호 확인',
+            invalid: '인증번호가 일치하지 않습니다.'
+            })
+          <div class="push-wrap">
+            <label class="label">마케팅 정보 수신 동의</label>
+            <p class="txt">이벤트 및 혜택에 대한 다양한 정보를 제공해드려요.</p>
+            <ul class="push-list">
+              <li>
+                <p class="tit">앱푸시 수신동의</p>
+                <span class="switch">
+                  <input type="checkbox" name="sSwitch" id="sSwitch1" value="">
+                  <label for="sSwitch1"></label>
+                </span>
+              </li>
+              <li>
+                <p class="tit">메일 수신동의</p>
+                <span class="switch">
+                  <input type="checkbox" name="sSwitch" id="sSwitch2" value="">
+                  <label for="sSwitch2"></label>
+                </span>
+              </li>
+              <li>
+                <p class="tit">SMS 수신동의</p>
+                <span class="switch">
+                  <input type="checkbox" name="sSwitch" id="sSwitch3" value="">
+                  <label for="sSwitch3"></label>
+                </span>
+              </li>
+            </ul>
+            <p class="txtInfo">※ 서비스 이용과 관련된 정보성 메세지의 경우 수신동의 여부와 관계없이 발송됩니다.</p>
+          </div>
+          <div class="btn-wrap is-between">
+            <button class="txtbutton">회원탈퇴</button>
+            <button class="txtbutton">로그아웃</button>
+          </div>
+        </div>
+			</div>
+      
+      <!-- tost popup -->
+      <div class="alert-box is-visible">
+        <p>
+          회원 정보가 수정 되었습니다.
+        </p>
+      </div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

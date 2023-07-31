@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container" class="mainPage"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu"><span></span></button>
+                    <button class="btn-search"><span></span></button>
+                    <div class="toggle-mode">
+                        <button class="btn-learn on">Learn</button> <!-- 활성화된 버튼은 on -->
+                        <button class="btn-run">Run</button>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="main" class="main-l scrollWrap">
+                        <div class="linkBanner">
+                            <div class="banner-wrap">
+                                <div class="bannerImg-wrap">
+                                    <div class="bannerImg" style="background-image:url('../img/banner_nodata.png');"></div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="missionInfo">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title"><strong>Hayden</strong>님을 위해 준비했어요.</div>
+                                </div>
+                                <div class="v-slide-wrap dataSlide">
+                                    <div class="slide-item">                                              
+                                        <div class="mission-slide-title">상황대화 학습</div>                                  
+                                        <div class="mission-progress-wrap">
+                                            <div class="conv-time">
+                                                <div class="top-wrap">
+                                                    <div class="achieve-wrap">
+                                                        <strong>0</strong>
+                                                        <span>/100분</span>
+                                                    </div>
+                                                </div>
+                                                <p>AI 대화 시간</p>
+                                            </div>
+                                            <div class="complete-mission">
+                                                <div class="top-wrap">   
+                                                    <div class="svg-wrap">
+                                                        <svg width="80" height="80" viewBox="-2 -2 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="40" cy="40" r="36" stroke="#E9E3CE" stroke-width="8"></circle>
+                                                            <circle cx="40" cy="40" r="36" stroke="#FF7C00" stroke-width="8" stroke-dashoffset="226"></circle> <!-- stroke-dashoffset 0(100%) ~ 226(0%) -->
+                                                        </svg>    
+                                                    </div>
+                                                    <div class="achieve-wrap">
+                                                        <strong>0</strong>
+                                                        <span>/100개</span>
+                                                    </div>
+                                                </div>
+                                                <p>완료 미션 수</p>
+                                            </div>
+                                            <div class="similarity">
+                                                <div class="top-wrap">   
+                                                    <div class="svg-wrap">
+                                                        <svg width="80" height="80" viewBox="-2 -2 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="40" cy="40" r="36" stroke="#E9E3CE" stroke-width="8"></circle>
+                                                            <circle cx="40" cy="40" r="36" stroke="#FF7C00" stroke-width="8" stroke-dashoffset="226"></circle>
+                                                        </svg>    
+                                                    </div>
+                                                    <div class="percent-wrap">
+                                                        <strong>50</strong>%
+                                                    </div>
+                                                </div>
+                                                <p>답변 유사도</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-item">
+                                        <div class="mission-slide-title">시험예측 점수</div> 
+                                        <div class="prediction-wrap">
+                                            <div class="box-wrap">
+                                                <div class="box box-toeicSpeaking">
+                                                    <span><strong>-</strong></span>
+                                                </div>
+                                                <div class="box box-opic">
+                                                    <span><strong>-</strong></span>
+                                                </div>
+                                                <div class="box box-lisaTest">
+                                                    <span><strong>-</strong></span>
+                                                </div>
+                                            </div>
+                                            <div class="text-wrap">
+                                                <p>토익스피킹/오픽 시험예측 점수는 알고리즘에 의한 추정치이며 실제 시험 결과와 다를 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="v-slide-wrap missionSlide">
+                                    <div class="slide-item">
+                                        <div class="slide-title">오늘의 미션</div>
+                                        <div class="slide-card shadowBox">
+                                            <div class="noData">
+                                                <p>No data to display</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-item">
+                                        <div class="slide-title">AI 복습 미션</div>
+                                        <div class="slide-card shadowBox">
+                                            <div class="noData">
+                                                <p>AI 복습 미션이 없습니다.<br>직접 복습할 미션을 확인해 보세요.</p>
+                                                <button class="btn-go-report">Report</button>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="myContents">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">My 콘텐츠</div>
+                                    <button class="btn-customContent"></button>
+                                </div>
+                                <div class="recommend-wrap shadowBox">
+                                    <p>인공지능 LISA가 학습 콘텐츠를<br>추천해 드릴게요!</p>
+                                    <button>관심 콘텐츠 선택하기</button>
+                                </div>                      
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="bookClass">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">북클래스</div>
+                                </div>
+                                <div class="slide-tab-wrap">
+                                    <div class="tab-nav-wrap">
+                                        <ul>
+                                            <li class="on">MY</li> <!-- 활성화 on -->
+                                            <li>일반</li>
+                                            <li>교과서</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-cont-wrap">
+                                        <!-- MY -->
+                                        <div class="tab-cont on"> <!-- on 추가시 해당 탭 활성화 -->      
+                                            <div class="class-empty">
+                                                <div class="img"></div>
+                                                <p>아직 수강 중인 클래스가 없습니다.</p>
+                                                <button>신청하러 가기</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- 일반 -->
+                                        <div class="tab-cont">                                 
+                                            <div class="teacherBanner">
+                                                <div class="slide-filter">
+                                                    <ul>
+                                                        <li class="on">회화</li> <!-- 활성화 on -->
+                                                        <li>패턴</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="swiper-container">
+                                                    <div class="slide-number">
+                                                        <div class="current-slide">1</div>
+                                                        <div class="slash">/</div>
+                                                        <div class="total-slide"></div>
+                                                    </div>
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap teacher-2">
+                                                                <div class="teacher-img" style="background-image:url('../img/t_banner_2.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="list-dimm">
+                                                                        <div class="img"></div>
+                                                                        <p>학습할 수 없는 콘텐츠입니다.<br>수강신청 내역을 확인해주세요.<br>학습 수강신청 사이트에서<br>수강신청하실 수 있습니다.</p>
+                                                                        <div class="dimm-btn-wrap">
+                                                                            <button class="btn-orange">무료강의 체험 #1</button>
+                                                                            <button class="btn-orange">무료강의 체험 #2</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap book-2">
+                                                                <div class="teacher-img" style="background-image:url('../img/book_banner_2.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap teacher-3">
+                                                                <div class="teacher-img" style="background-image:url('../img/t_banner_3.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="list-dimm">
+                                                                        <div class="img"></div>
+                                                                        <p>학습할 수 없는 콘텐츠입니다.<br>수강신청 내역을 확인해주세요.<br>학습 수강신청 사이트에서<br>수강신청하실 수 있습니다.</p>
+                                                                        <div class="dimm-btn-wrap">
+                                                                            <button class="btn-orange">무료강의 체험 #1</button>
+                                                                            <button class="btn-orange">무료강의 체험 #2</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                        <!-- 교과서 -->
+                                        <div class="tab-cont">                                       
+                                            <div class="teacherBanner">
+                                                <div class="slide-filter">
+                                                    <ul>
+                                                        <li class="on">초등</li> <!-- 활성화 on -->
+                                                        <li>중등</li>
+                                                        <li>고등</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="swiper-container">
+                                                    <div class="slide-number">
+                                                        <div class="current-slide">1</div>
+                                                        <div class="slash">/</div>
+                                                        <div class="total-slide"></div>
+                                                    </div>
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap teacher-1">
+                                                                <div class="teacher-img" style="background-image:url('../img/t_banner_1.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                            
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap book-1">
+                                                                <div class="teacher-img" style="background-image:url('../img/book_banner_1.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap teacher-2">
+                                                                <div class="teacher-img" style="background-image:url('../img/t_banner_2.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="list-dimm">
+                                                                        <div class="img"></div>
+                                                                        <p>학습할 수 없는 콘텐츠입니다.<br>수강신청 내역을 확인해주세요.<br>학습 수강신청 사이트에서<br>수강신청하실 수 있습니다.</p>
+                                                                        <div class="dimm-btn-wrap">
+                                                                            <button class="btn-orange">무료강의 체험 #1</button>
+                                                                            <button class="btn-orange">무료강의 체험 #2</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                          
+                                                        <div class="swiper-slide">
+                                                            <div class="t-banner-wrap book-1">
+                                                                <div class="teacher-img" style="background-image:url('../img/book_banner_1.png');"></div>
+                                                                <div class="list-wrap">
+                                                                    <ul>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">사업 실패한 아들 위로하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">결혼 축하하기</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                        <li class="textBox">
+                                                                            <div class="top-text">힘든 업무를 맡은 친구에게 조언할 때</div>
+                                                                            <div class="btm-text">It’s really too late to think it’s late.</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="showAll-btn-wrap">
+                                                                    <button class="btn-showAll"><span>전체 보기</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="situationExpression">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">상황 별 결정적 표현</div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>                      
+                            </div>
+                        </div>
+                        <div class="space"></div>          
+                        <div class="continueMission">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">뭉쳐야 쓴다. 여러 상황 대화를 한방에!</div>
+                                    <p>연속된 10가지 상황을 하나의 스토리로 학습이 가능해요.</p>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space"></div>          
+                        <div class="topMission type-popularity">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">나만 모를 수 없잖아? 인기 Top 3 미션</div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="conversationSkill">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">잘 아는 패턴 하나로 자라는 회화 실력</div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space"></div>         
+                        <div class="topMission type-difficulty">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">도전! 난이도 끝판왕 Top 3 미션</div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space"></div> 
+                        <div class="hashTagMissionList">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">인싸답게 조언 날리기 <span class="hashTag">#띵언</span></div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space"></div> 
+                        <div class="hashTagMissionList">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">EBS 태연쌤의 이지잉글리쉬 <span class="hashTag">#김태연</span></div>
+                                </div>
+                                <div class="noData">
+                                    <p>No data to display</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="space-last"></div>
+                    </div>  
+
+                    <button class="btn-scrollTop"><span></span></button>
+
+                </div>  
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>         
+
+        // swiper slide
+        document.querySelectorAll('.bookClass .swiper-container').forEach(function(item){
+            const slideNumber = item.querySelector('.slide-number');              
+            const slideCount = item.querySelectorAll('.swiper-slide').length; 
+
+            var swiper = new Swiper(item, {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                resistance : true,
+                resistanceRatio : 0,
+                on: {
+                    init: function(){
+                        // 총 슬라이드 갯수
+                        slideNumber.querySelector('.total-slide').textContent = slideCount;
+                    },
+                    slideChange: function(sw){
+                        // 현재 슬라이드 번호
+                        slideNumber.querySelector('.current-slide').textContent = sw.realIndex + 1;
+                    }
+                }
+            });
+        }) 
+
+        // bookclass tab
+        const bookClassTabNav = document.querySelectorAll('.bookClass .slide-tab-wrap .tab-nav-wrap ul li');
+        const bookClassTabCont = document.querySelectorAll('.bookClass .slide-tab-wrap .tab-cont-wrap .tab-cont');
+        function bookClassTabNavChange(){
+            bookClassTabNav.forEach(e => e.classList.remove('on'));
+            this.classList.add('on');
+
+            const selectTabNavIndex = Array.prototype.indexOf.call(this.parentNode.children, this);
+            bookClassTabContChange(selectTabNavIndex);
+        }
+        function bookClassTabContChange(_index){
+            bookClassTabCont.forEach(e => e.classList.remove('on'));
+            bookClassTabCont[_index].classList.add('on');
+        }
+        bookClassTabNav.forEach(item => item.addEventListener('click', bookClassTabNavChange));  
+    </script>
+</body>
+</html>

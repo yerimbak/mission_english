@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      <!-- 220524 header 변경 -->
+      @@include('../include/header.html', {
+      headerKeyTitle: '실전대화',
+      headerTitleText:'What do you do after work?'
+      })
+      <div class="content type-mission bg-gray">
+        <div class="speaking-wrap">
+          <!-- 발화전 -->
+          <!-- D : 활성화 클래스 active  ||  발화전 화면 trigger 클래스 추가 -->
+          <div class="speaking-box trigger active">
+            <div class="speaking-item text-box">
+              <div class="title-box">
+                <div class="title">HI, Grace</div>
+                <!-- D : 툴팁 활성화 클래스 on -->
+                <!-- 220610 : bottom 클래스 추가 -->
+                <div class="balloon-text bottom on">아래 문장을 말하고 대화를 시작해 보세요.</div>
+              </div>
+              <div class="progress-bar" data-timer="5" data-progress="eventStart">
+                <span class="bar"></span>
+              </div>
+            </div>
+            <div class="speaking-item control-box">
+              <!-- D : 툴팁 활성화 클래스 on -->
+              <!-- 220610 : bottom 클래스 제거 -->
+              <div class="balloon-text on">AI가 목소리를 인식하면 물결이 움직여요</div>
+              <!-- D : 마이크 활성화 on 클래스 || 움직임 클래스 active -->
+              <!-- D : pd1 ~ pd10  볼륨에따른 높이조절 -->
+              <div class="ani-speaking ">
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+              </div>
+            </div>
+          </div>
+          <!-- //발화전 -->
+        </div>
+
+        <!-- 바텀 시트 버튼 -->
+        @@include('../include/bottomSheetBtn.html', {
+        discriptionActiveClass: 'off'
+        })
+      </div>
+
+      <button type="button" class="btn-top">top</button>
+      
+      
+      <!-- 모달 -->
+      <div class="bg-dim modal" style="display: block;"></div>
+      <div class="modal-wrap type-alert size-xs show">
+        <div class="content">
+          <div class="title">잠깐..!<br>
+            하려던 말이 조금 꼬였어요 💦</div>
+          <div class="sub-text type2">
+            다시 마음을 가다듬고 <br>처음부터 집중해 볼게요.
+          </div>
+        </div>
+        <!-- ** progressbar 추가시 animation -->
+        <button class="button is-light w-100 progressbar" onclick="modalClose()">학습 다시 시작하기</button>
+      </div>
+
+
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

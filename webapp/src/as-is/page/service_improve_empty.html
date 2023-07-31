@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container">
+                
+                <header class="bg-white">
+                    <button class="btn-back"><span></span></button>
+                    <p class="centerText">서비스 개선 제안</p>
+                    <button class="btn-proposal"><span></span></button>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="serviceImprove">
+                        <div class="tabNav-wrap">
+                            <ul>
+                                <li class="on">새 제안</li> <!-- 활성화 on -->
+                                <li>답변 완료</li>
+                                <li>내 제안</li>
+                            </ul>
+                        </div>
+                        <div class="tabCont-wrap scrollWrap">
+                            <!-- 새 제안 -->
+                            <div class="tabCont on">
+                                <div class="commentList-wrap">
+                                    <div class="empty-wrap">
+                                        <p>등록된 제안이 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 답변 완료 -->
+                            <div class="tabCont">
+                                <div class="commentList-wrap">
+                                    <div class="empty-wrap">
+                                        <p>등록된 제안이 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 내 제안 -->
+                            <div class="tabCont">
+                                <div class="commentList-wrap">
+                                    <div class="empty-wrap">
+                                        <p>등록된 제안이 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <button class="btn-scrollTop"><span></span></button>           
+
+                </div> 
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>        
+
+        
+        // tab
+        document.querySelectorAll('.tabNav-wrap li').forEach(function(e, index){
+            e.addEventListener('click', function(){
+                e.parentNode.querySelectorAll('li').forEach(e => e.classList.remove('on'));
+                e.classList.add('on');
+
+                document.querySelector('.tabCont-wrap').scrollTop = 0;
+                document.querySelectorAll('.tabCont-wrap .tabCont').forEach(e => e.classList.remove('on'));
+                document.querySelectorAll('.tabCont-wrap .tabCont')[index].classList.add('on')
+            })
+        })
+
+        // 점3개 버튼 - 메뉴 오픈
+        document.querySelectorAll('.etc-info .edit-wrap .btn-edit').forEach(function(item){
+            item.addEventListener('click', function(){
+                this.parentNode.classList.toggle('on');
+            })
+        })
+
+        // 점3개 메뉴 팝업 - 다른 영역 클릭하면 닫히게
+        window.addEventListener('mouseup', function(e){
+            // close dropdown when clicked outside
+            document.querySelectorAll('.etc-info .edit-wrap .btn-edit').forEach(function(item){
+                if (!item.contains(e.target)){
+                    item.parentNode.classList.remove('on');
+                } 
+            })
+        })
+
+        // 댓글 textarea
+        document.querySelectorAll('.inputReply-wrap textarea').forEach(function(item){
+            item.addEventListener('focus', function(){
+                this.classList.add('on')
+            })
+
+            item.addEventListener('blur', function(){
+                var _val = this.value;
+                if(_val.length == 0 || _val.trim().length == 0){
+                    this.value = '';
+                    this.classList.remove('on')
+                }
+
+            })
+        })
+
+    </script>
+</body>
+</html>

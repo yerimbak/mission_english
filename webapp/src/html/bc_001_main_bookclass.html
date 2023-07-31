@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner h-auto"><!-- 220929 클래스 h-auto 추가 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '상세보기',
+				headerTitleText:''
+			})
+			<div class="content type-flex h-auto bg-white"><!-- 220927 클래스 h-auto 추가 -->
+				<div class="bookclass-detail">
+					<div class="book-wrap">
+						 <div class="image-wrap">
+							<div class="item" id="scrollBook">
+								<img src="../img/main/bookclass-detail_01.png" alt="sample-book">
+								<div class="bookmark-item"><button type="button" class="btn-bookmark">즐겨찾기</button></div>
+							</div><!-- on 추가시 활성화 -->
+						 </div>
+					</div>
+					<div class="book-info-wrap">
+						<div class="free-text">현재는 무료 학습만 제공하고 있습니다.</div>
+						<div class="title-wrap">
+							<div class="title-wrap-header">
+								<div class="label-wrap">
+									<span class="label color-01">회화</span>
+									<span class="label color-02">초급</span>
+								</div>
+								<div class="memeber-info">
+									<span>2000</span>명 학습중
+								</div>
+							</div>
+							<div class="title">
+								김태연의 이지 잉글리시 김태연의 이지 잉글 두줄일 때 글자 공백포함 40자 들어 공백포함 40자 들어 공백포함 40자 들어
+							</div>
+							<div class="sub-text-wrap">
+								<span class="sub-text">김태연 지음</span>
+								<span class="sub-text">EBS BOOKS</span>
+								<span class="sub-text">2020년 10월</span>
+							</div>
+							<div class="toggle-info">
+								출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출. 최대 5줄 까지 노출. 출판사 홍보 문구 입니다. 첫 줄 공백 포함 26자 까지 들어갑니다. 최대 5줄 까지 노출.
+							</div>
+						</div>
+
+						<div class="book-index-wrap">
+							<div class="book-index-title">
+								<div class="title">목차(150)</div>
+								<div class="search-area">
+									<input type="text" placeholder="제목 검색">
+									<button type="button" class="btn-del"></button>
+								</div>
+								<button type="button" class="btn-search"></button>
+							</div>
+							<ul class="book-index-list">
+								<li class="book-index-item lock">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item">
+									<a href="#none">
+										<div class="title">친환경 제품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다품  첫니다</div>
+										<div class="text">This is biodegradeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함adeable. 첫째 줄 공백포함 31자 들어갑니다.최대 2줄 까지 들어가요</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item lock">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사 때 인사 때 인사 때 인사 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow you tomorrow you tomorrow you tomorrow you tomorrow you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+								<li class="book-index-item lock">
+									<a href="#none">
+										<div class="title">퇴근할 때 인사</div>
+										<div class="text">See you tomorrow.</div>
+										<span class="free-txt">Free</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="btn-more"> <span>더보기</span> </button>
+					</div>
+					<div class="fixed-bottom">
+						<button type="button" class="fixed-btn"><span>클래스 구독하기</span></button>
+					</div>
+				</div>
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+<script>
+	// 출판사 토글 이벤트
+	document.querySelector('.toggle-info').addEventListener('click', function(e){
+		if (e.target.classList.contains('on')) {
+			e.target.classList.remove('on')
+		} else {
+			e.target.classList.add('on')
+		}
+	})
+	// 목차 검색
+	document.querySelector('.book-index-title .btn-search').addEventListener('click', function(e){
+		if (document.querySelector('.search-area').classList.contains('show')) {
+			document.querySelector('.search-area').classList.remove('show');
+		} else {
+			document.querySelector('.search-area').classList.add('show');
+			document.querySelector('.search-area input').focus();
+		}
+	})
+	// 목차 검색 del
+	document.querySelector('.book-index-title .btn-del').addEventListener('click', function(e){
+		document.querySelector('.book-index-title input').value = '';
+		document.querySelector('.search-area').classList.remove('show');
+	});
+
+
+
+	// var scrBook = document.getElementById("scrollBook");
+	// var num = 100;
+	// function scrollEvent() {
+		
+	// 	num = num-1
+	// 	if (num > 55) {
+	// 		scrBook.style.width = num + '%'
+	// 	} 
+		
+	// }
+
+	// 스크롤 애니메이션 수정 : 220916
+	const options = {
+  root: null, // viewport
+  rootMargin: "0px",
+  threshold: 1.0,  // 50%가 viewport에 들어와 있어야 callback 실행
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('on');
+      } else {
+        entry.target.classList.add('on');
+      }
+    });
+  }, options);
+
+  const boxList = document.querySelectorAll('#scrollBook');
+
+  // 반복문을 돌려 모든 DOM에 적용
+  boxList.forEach(el => observer.observe(el));
+
+</script>
+</html>

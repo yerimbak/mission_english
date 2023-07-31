@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="bookClassContainer">
+
+                <header class="type2"> <!-- type2 추가시 흰색 화살표 -->
+                    <button class="btn-back"><span></span></button>
+                </header>
+
+                <div class="contents-wrap">
+                    <div id="dialoguePractice" class="type-learning">
+                        <div class="bg-wrap">
+                            <div class="bg" style="background-image:url('../img/bookClass/bg_stepSelect.jpg')"></div> <!-- 백그라운드 이미지는 인라인 스타일로 -->
+                        </div>
+                        <div class="main-sentence"> 
+                            <p class="fadeInRightText">
+                                <span>Do</span>
+                                <span>you</span>
+                                <span>need</span>
+                                <span>any</span>
+                                <span>help?</span>
+                            </p>
+                        </div>
+                        <div class="guide-text-wrap">
+                            <div class="inner">
+                                <p>저는 그냥 돌아보는 중이라고 말해 보세요.</p>
+                            </div>
+                        </div>
+
+                        <div id="invoke-wrap">
+                            <div class="inner">
+                                <ul class="">
+                                    <!-- ready 추가시 활성화 // loading 추가시 로딩 // waiting 추가시 녹음버튼 // ready + talking 발화모션 // more 한번 더 말하기 -->
+                                    <li class="dot dot1"></li>
+                                    <li class="dot dot2"></li>
+                                    <li class="dot dot3"></li>
+                                    <li class="dot dot2"></li>
+                                    <li class="dot dot1"></li>
+                                    <li class="loading-li">
+                                        <div class="loading-icon"></div>
+                                    </li>
+                                    <li class="waiting-li">
+                                        <div class="waiting-icon"></div>
+                                    </li>
+                                    <li class="more-li">
+                                        <img src="../img/bookClass/icon_invoke_more.gif" alt="">
+                                        <p>여기를 터치하면 추가로 녹음할 수 있어요</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="imListening" style="display:none;">I’m Listening...</p>
+                        </div>
+
+                        <div id="learning-skip">
+                            <button class="btn-learning-skip">넘어가기</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <div id="btmMenu" class="type2"> <!-- open 클래스 추가시 메뉴 오픈 -->
+                    <button class="btn-menuOpen"></button>
+                    <div class="menu-wrap">
+                        <div class="dimm"></div>
+                        <ul>
+                            <li>
+                                <button class="btn-levelList">레벨 리스트</button>
+                                <button class="btn-step">단계별 학습</button>
+                                <button class="btn-home">Home</button>
+                                <button class="btn-menuClose"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>         
+    
+        // 하단 메뉴 보이기
+        document.querySelector('#btmMenu .btn-menuOpen').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.add('open');
+        })
+
+        // 하단 메뉴 숨김
+        document.querySelector('#btmMenu .btn-menuClose').addEventListener('click', function(){
+            document.querySelector('#btmMenu').classList.remove('open')
+        })
+
+        var fadeInRight_text_setTime = 0; // 오른쪽에스 fadeIn되어서 나오는 텍스트들 전체 애니메이션 시간
+    
+        fadeInRight_text();
+
+        setTimeout(function(){
+            
+            // showMainSentence();  20220318 삭제
+
+            setTimeout(function(){
+                // showMainSentenceGoTop();  20220318 삭제
+
+                setTimeout(function(){
+                    showGuideText();
+                    document.querySelector('#invoke-wrap ul').classList.add('ready');
+
+                    setTimeout(function(){
+                        document.querySelector('#invoke-wrap ul').classList.add('talking');
+                        document.querySelector('#invoke-wrap .imListening').style.display = 'block';
+                    }, 500)
+
+                }, 0)
+
+            }, fadeInRight_text_setTime * 1000)
+
+        }, 500) 
+
+        
+        // main-sentence 표시 //20220318 삭제
+        // function showMainSentence(){
+        //     document.querySelector('.main-sentence').style.display = 'block';
+        // }
+
+        // main-sentence 위로 // 20220318 삭제
+        // function showMainSentenceGoTop(){
+        //     document.querySelector('.main-sentence p').classList.add('go-top');  
+        // }
+
+        // guide-text-wrap 표시
+        function showGuideText(){
+            // document.querySelector('.guide-text-wrap').style.display = 'block';  20220318 삭제
+            document.querySelector('.guide-text-wrap .inner').classList.add('fadeInUp');
+        }
+
+        // fadeInRight_text animation
+        function fadeInRight_text() {
+            var ani_dealy = 0.15;
+            var fadeInRightText_span = document.querySelectorAll('.main-sentence .fadeInRightText span');
+
+            fadeInRightText_span.forEach(function(item, index){
+                fadeInRightText_span[index].style.animationDelay = ani_dealy + 's';
+                ani_dealy += 0.17;
+            })
+
+            fadeInRight_text_setTime = ani_dealy + 0.6; // 20220318 수정
+        }
+    </script>
+</body>
+</html>

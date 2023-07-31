@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/aitutor_m.css">
+</head>
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+
+            <div id="container">
+                
+                <header class="bg-white">
+                    <button class="btn-back"><span></span></button>
+                    <p class="centerText">음성 인식 난이도 설정</p>
+                </header>
+                <div class="contents-wrap">
+
+                    <div id="setVoiceDifficulty" class="scrollWrap">
+                        <div class="difficulty-list-wrap">
+                            <ul>
+                                <li class="on"> <!-- 활성화 on -->
+                                    <div class="difficulty-type">낮음</div>
+                                    <p class="desc">기초 단어를 사용하여 발화<br>AI음성 인식율 최소 기준</p>
+                                </li>
+                                <li>
+                                    <div class="difficulty-type">보통</div>
+                                    <p class="desc">의미 부합 단어 사용하여 발화<br>AI음성 인식율 중간 기준</p>
+                                </li>
+                                <li>
+                                    <div class="difficulty-type">높음</div>
+                                    <p class="desc">문법에 맞는 정확한 문장 발화<br>AI음성 인식율 높은 기준</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn-save btn-orange">저장</button>
+                        </div>
+                    </div>           
+
+                </div> 
+
+            </div>  
+
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>                
+        const difficultLlist = document.querySelectorAll('.difficulty-list-wrap ul li');
+        function difficultListChange(){
+            difficultLlist.forEach(e => e.classList.remove('on'));
+            this.classList.add('on');
+        }
+        difficultLlist.forEach(item => item.addEventListener('click', difficultListChange))
+    </script>
+</body>
+</html>

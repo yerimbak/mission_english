@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "rules": {
+    "no-unused-vars": "warn", // alert --> warning 으로 변경(사용하지 않는 변수및 파라미터)
+    "no-nested-ternary": 0 // 중첩된 삼항식 허용여부
+  },
+  "globals": {
+  }
+}

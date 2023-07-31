@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('../include/head_new.html')
+<body>
+	<div id="app">
+		<div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '학습 목적 설정',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+			<div class="content type-mission">
+				<div class="onboardingWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							학습 목적을 선택해주세요.
+						</h3>
+            <p class="h-txt">
+              $name$님의 관심사에 꼭 맞는<br>
+              학습 콘텐츠를 추천해드릴게요!
+            </p>
+					</div>
+          <div class="list-box">
+            <span class="sort">최대 3개까지 선택 가능해요</span>
+            <ul class="list">
+              <li class="checkbox">
+                <input type="checkbox" id="chk01">
+                <i></i>
+                <label for="chk01">&#128172; 막힘없이 일반회화하기</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="chk02">
+                <i></i>
+                <label for="chk02">&#128109; 외국인 친구 사귀기</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="chk03">
+                <i></i>
+                <label for="chk03">&#128188; 비즈니스 회화하기</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="chk04">
+                <i></i>
+                <label for="chk04">&#128077; 요즘 영어 정복하기</label>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="chk05">
+                <i></i>
+                <label for="chk05">&#128170; 영어로 건강관리하기</label>
+              </li>
+            </ul>
+          </div>
+					<div class="btn-wrap is-fixed">
+						<button class="button is-full is-light">학습목적 선택 완료</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('../include/footer_js.html')
+</body>
+</html>

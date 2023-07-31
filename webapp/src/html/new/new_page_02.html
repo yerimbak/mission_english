@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+        headerKeyTitle: '타이틀',
+        headerTitleText:'',
+        headerLine:'no-line',
+        save:true,
+      })
+      <div class="content type-mission">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-wrap size-full show" id="evtPop">
+    <header class="header type-mission no-line">
+      <div class="title-wrap">
+        <div class="key-title">타이틀</div>
+        <button type="button" class="btn-close" onclick="modalClose()"></button>
+      </div>
+    </header>
+    <div class="content type-scroll">
+
+    </div>
+  </div>
+
+  @@include('../include/footer_js.html')
+</body> 
+
+</html>

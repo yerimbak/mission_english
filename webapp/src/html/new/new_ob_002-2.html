@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '음성인식 테스트',
+      headerTitleText:''
+      })
+      <div class="content type-mission bg-gray">
+        <div class="onboardingWrap voice-test">
+          <div class="typo-wrap">
+            <!-- D : 말풍선 활성화 클래스 on -->
+            <div class="balloon-text bottom on primary">아래의 문장을 말해보세요.</div>
+            <div class="typo">
+              Nice To Meet You
+            </div>
+          </div>
+          <div class="start-time-wrap on">
+            <div class="number">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="speaking-wrap" style="display: block;">
+              <!-- D : 음성 활성화 클래스 active -->
+              <div class="ani-speaking active">
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

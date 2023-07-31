@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '헤더영역',
+      headerTitleText:'헤더 서브텍스트'
+      })
+      <style>
+        .btn.open-popup {
+          background: #e8e8e8;
+          padding: 10px 20px;
+          margin-top: 20px;
+        }
+      </style>
+      <div class="content type-mission">
+        <!-- D : open-popup 클래스,  data-modal-name="팝업화면명" 필요 -->
+        <!-- D : 팝업 닫는 함수 modalClose() -->
+        <button type="button" class="btn open-popup" data-modal-name="pop01">팝업버튼</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-dim modal" style="display: block;"></div>
+  <div class="modal-wrap type-alert size-xs show" id="pop01">
+    <div class="content">
+      <div class="title">
+        타이틀이들어가는 영역
+      </div>
+      <div class="sub-text type2">내용이 들어가는 영역</div>
+    </div>
+    <div class="btn-wrap">
+      <a href="#none" class="btn-pop type-01" onclick="modalClose()">아니요</a>
+      <a href="#none" class="btn-pop type-02">네, 좋아요</a>
+    </div>
+  </div>
+
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '비밀번호찾기',
+				headerTitleText:'',
+        headerLine:'no-line'
+			})
+      <div class="content type-mission">
+				<div class="joinWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							이메일을 입력해주세요.
+						</h3>
+            <p class="h-txt">미션잉글리시 아이디로 사용중인 이메일을<br>
+							입력해주세요.</p>
+					</div>
+          <div class="email-form">
+            @@include('../include/default_filed.html', {
+							inputType: 'text',
+							placeholder: '아이디(이메일)',
+							invalid: '이메일을 정확하게 입력해주세요'
+							})
+            <div class="btn-wrap">
+              <button class="button is-full is-point" disabled>임시 비밀번호 발송</button>
+            </div>
+          </div>
+				</div>
+			</div>
+    </div>
+  </div>
+  @@include('../include/footer_js.html')
+</body>
+
+</html>

@@ -1,0 +1,955 @@
+<!-- ***********************************
+     220523 : 하단 북클래스 html 만 수정
+     *********************************** -->
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<link rel="stylesheet" href="../css/swiper-bundle.css">
+<body ontouchstart="">
+    <div id="app">
+        <div class="app-inner">  
+            <!-- 220624 : main 컬러 변경 클래스 -> new -->
+            <div id="container" class="mainPage new"> <!-- 메인페이지만 클래스 추가 -->
+                
+                <header>
+                    <button class="btn-menu new"><span></span></button> <!-- new 추가시 new 아이콘 추가-->
+                    <button class="btn-search"><span></span></button>
+                    <div class="toggle-mode">
+                        <button class="btn-learn on">Learn</button> <!-- 활성화된 버튼은 on -->
+                        <button class="btn-run">Run</button>
+                    </div>
+                </header>
+                <div class="contents-wrap">
+
+                    <button class="btn-mainLisaLab"></button>
+
+                    <div id="main" class="main-l scrollWrap">
+                        <!-- ******************************************
+                                        북클래스 수정
+                             ****************************************** -->
+                        <div class="space"></div>
+                        <div class="bookclass-wrap">
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">북클래스</div>
+                                </div>
+                                <div class="tab-wrap type-line" data-tab="lineTab1">
+                                    <span class="bg"></span>
+                                    <button type="button" class="tab on">MY</button>
+                                    <button type="button" class="tab">클래스</button>
+                                </div>
+                                <div class="tab-cont-wrap" id="lineTab1">
+                                    <!-- tab 북클래스 : MY -->
+                                    <div class="tab-cont on">
+                                        <!-- 220616 수정 : 필터 버튼추가 -->
+                                        <div class="filter-wrap">
+                                            <button type="button" class="btn-filter on"><span>필터</span></button>
+                                        </div>
+                                        <div class="swiper-book-class type-my">
+                                            <div class="swiper swiper-my">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">회화</span>
+                                                                            <span class="label color-02">초급</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근) 1학년 만교영어(이재근) 1학년 만교영어(이재근) 1학년 만교영어(이재근) 1학년 만교영어(이재근) 1학년 만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                                                                        <div class="bar-active" style="width:17%">
+                                                                            <div class="ballon">17%</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">회화</span>
+                                                                            <span class="label color-02">초급</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <div class="bar-active">
+                                                                            <div class="ballon">0%</div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //tab 북클래스 : MY -->
+                                    <!-- tab 북클래스 : 클래스 -->
+                                    <div class="tab-cont">
+                                        <div class="filter-wrap">
+                                            <!-- 220603 수정 : btn-filter클래스로 수정 -->
+                                            <button type="button" class="btn-filter on"><span>필터</span></button>
+                                        </div>
+                                        <div class="swiper-book-class">
+                                            <div class="swiper swiper-book">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/profile_02.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-01.png" alt="미국에서 기죽지 않는 쓸만한 영어">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-02.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">회화</span>
+                                                                <span class="label color-02">초급</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //tab 북클래스 : 클래스 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="bookclass-wrap">
+                            <!-- 220608 : main-cont-inner, cont-title-wrap 태그 추가하면서 마크업 수정 -->
+                            <div class="main-cont-inner">
+                                <div class="cont-title-wrap">
+                                    <div class="title">교과서 클래스</div>
+                                </div>
+                                <div class="tab-wrap type-line" data-tab="lineTab2">
+                                    <span class="bg"></span>
+                                    <button type="button" class="tab on">MY</button>
+                                    <button type="button" class="tab">클래스</button>
+                                </div>
+                                <div class="tab-cont-wrap" id="lineTab2">
+                                    <!-- tab 교과서 클래스 : MY -->
+                                    <div class="tab-cont on">
+                                        <!-- 220616 수정 : 필터 버튼추가 -->
+                                        <div class="filter-wrap">
+                                            <button type="button" class="btn-filter on"><span>필터</span></button>
+                                        </div>
+                                        <div class="swiper-book-class type-my">
+                                            <div class="swiper swiper-my-row swiper-grid-column swiper-backface-hidden">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                 <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                 <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">회화</span>
+                                                                            <span class="label color-02">초급</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                                                                        <div class="bar-active" style="width:17%">
+                                                                            <div class="ballon">17%</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                 <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                 <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">동아</span>
+                                                                            <span class="label color-02">초등</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <div class="bar-active">
+                                                                            <div class="ballon">0%</div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                 <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                 <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">동아</span>
+                                                                            <span class="label color-02">초등</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                                                                        <div class="bar-active" style="width:17%">
+                                                                            <div class="ballon">17%</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">동아</span>
+                                                                            <span class="label color-02">초등</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <div class="bar-active">
+                                                                            <div class="ballon">0%</div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-progress">
+                                                            <div class="item">
+                                                                <img src="../img/icons/sample-book-06.png" alt="sample-book">
+                                                            </div>
+                                                            <div class="item type-info">
+                                                                <!-- 220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="flex-top">
+                                                                    <div class="info-top">
+                                                                        <div class="label-wrap">
+                                                                            <span class="label color-01">동아</span>
+                                                                            <span class="label color-02">초등</span>
+                                                                        </div>
+                                                                        <div class="subscribe">+<span>2000</span>명 구독중</div>
+                                                                    </div>
+                                                                    <div class="title">중학교영어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만어(이재근)  만</div>
+                                                                    <!-- 220616 : sub-title 추가 -->
+                                                                    <div class="sub-title">이재근 외 1  지음ㅣ한빛미디어ㅣ2019년 10월</div>
+                                                                </div>
+                                                                <!-- //220616 : flex-top 태그 추가 및  마크업  위치 변경 -->
+                                                                <div class="progress-wrap">
+                                                                    <div class="bar">
+                                                                        <!-- D : 바 수치는 style width 값으로 컨트롤 -->
+                                                                        <div class="bar-active" style="width:17%">
+                                                                            <div class="ballon">17%</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bar-info">
+                                                                        <div class="date">22.03.31~22.12.31</div>
+                                                                        <div class="num"><strong>25</strong>/<span>150</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab 교과서 클래스 : MY -->
+                                    <!-- tab 교과서 클래스 : 클래스 -->
+                                    <div class="tab-cont">
+                                        <div class="filter-wrap">
+                                            <button type="button" class="btn-filter"><span>필터</span></button>
+                                        </div>
+    
+                                        <div class="swiper-book-class type-small">
+                                            <div class="swiper swiper-book-small swiper-grid-column swiper-backface-hidden">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-03.png" alt=" MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-04.png" alt="MIDDLE SCHOOL ENGLISH 3">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-03.png" alt="60 세컨즈 잉글리쉬">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-03.png" alt=" MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-04.png" alt="MIDDLE SCHOOL ENGLISH 3">
+                                                            <span class="label-top icon-speaker"></span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="book-item">
+                                                            <img src="../img/icons/sample-book-05.png" alt="MIDDLE SCHOOL ENGLISH 1">
+                                                            <span class="label-top">구독중</span>
+                                                            <div class="label-wrap">
+                                                                <span class="label color-01">교과서</span>
+                                                                <span class="label color-02">초등</span>
+                                                            </div>
+                                                            <div class="sub-text">+<span>80</span>명 구독중</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //tab 교과서 클래스 : 클래스 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <!-- ******************************************
+                                        //북클래스 수정
+                             ****************************************** -->
+                    </div> 
+
+                    <button class="btn-scrollTop"><span></span></button>
+
+                </div>  
+
+            </div>  
+
+
+            <button type="button" class="btn-top">top</button>
+        </div>
+    </div>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>                
+        // 220523 추가  tab event
+        document.querySelectorAll('.tab-wrap.type-line').forEach(function(element, index){
+            const _bg = element.firstElementChild
+            _bg.style.width = _bg.nextElementSibling.offsetWidth +'px';
+            _bg.style.left = _bg.nextElementSibling.offsetLeft + 'px';
+            
+        }) 
+        document.querySelectorAll('.tab-wrap.type-line .tab').forEach(function(element, index){
+            element.addEventListener('click',tabChange)
+        }) 
+        function tabChange() {
+            const _thisTab = this;
+            const dataTab = _thisTab.parentElement.dataset.tab;
+            const _thisTabs = document.querySelectorAll('.tab-wrap[data-tab="'+dataTab+'"] .tab');
+            const _tabCont = document.querySelectorAll('#'+dataTab+' .tab-cont');
+            const _bg = _thisTab.parentElement.firstElementChild;
+            let _idx = 0;
+            _thisTabs.forEach(function(element, index){
+                element.classList.remove('on')
+                _thisTab.classList.add('on')
+                if (element.classList.contains('on')){
+                    _idx = index;
+                }
+            })
+            _bg.style.left = _thisTab.offsetLeft + 'px';
+            _bg.style.transition = 0.1*(_thisTabs.length) + 's'
+
+            _tabCont.forEach(function(element,index){
+                element.classList.remove('on');
+                _tabCont[_idx].classList.add('on');
+            })
+        }
+
+        // 220523 추가 bookSwier
+        //bookSwier 북클래스 - my
+        var mySwier = new Swiper('.swiper-my', {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-my .swiper-pagination',
+            },
+        });
+        var mySwierRow = new Swiper('.swiper-my-row', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            slidesPerColumn: 2,
+            slidesPerGroup : 1,
+            slidesPerColumnFill: 'column',
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-my-row .swiper-pagination',
+            },
+        });
+
+        //bookSwier 북클래스 - 클래스
+        var bookSwier = new Swiper('.swiper-book', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            slidesPerGroup : 3,  // 220603 추가 : 스와이퍼 3개씩 이동
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-book .swiper-pagination',
+            },
+        });
+        //bookSwier 교과서클래스 - 클래스
+        var bookSwierRow = new Swiper('.swiper-book-small', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            slidesPerColumn: 2,
+            slidesPerGroup : 3,  // 220603 추가 : 스와이퍼 3개씩 이동
+            slidesPerColumnFill: 'column',
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-book-small .swiper-pagination',
+            },
+        });
+        
+        
+
+    </script>
+</body>
+</html>

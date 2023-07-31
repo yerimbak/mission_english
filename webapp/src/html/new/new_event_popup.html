@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/head_new.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '헤더',
+                headerTitleText:'헤더 서브텍스트'
+			})
+
+			<!-- 북클래스 필터 -->
+            <div class="bg-dim"></div>
+
+            <!-- bottomsheet -->
+            <div class="bottom-sheet evt-pop" id="eventPopup">
+                <img src="../img/buttertime/evt_popup.png" alt="2022년 10월 27일,
+                미션잉글리시가 버터타임으로
+                새롭게 태어납니다. ">
+                <button type="button" class="btn-close" data-bottomSheet="bottomSheet01" ></button>
+            </div>
+        </div>
+	</div>
+	@@include('../include/footer_js.html')
+  <script>
+    const bgDim = document.querySelector('.bg-dim');
+    const btnClose = document.querySelector('.btn-close');
+    const bottomSheet = document.querySelector('#eventPopup');
+
+    window.onload = function () {
+      bgDim.classList.add('on');
+      bottomSheet.classList.add('on');
+      
+    };
+    btnClose.addEventListener('click',function(){
+      bgDim.classList.remove('on');
+      bottomSheet.classList.remove('on');
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../include/head_new.html')
+
+<body>
+  <div id="app">
+    <div class="app-inner">
+      @@include('../include/header.html', {
+      headerKeyTitle: '회원가입',
+      headerTitleText:'',
+      headerLine:'no-line'
+      })
+			<div class="content type-mission">
+				<div class="joinWrap">
+					<div class="textbox">
+						<h3 class="h-tit">
+							반가워요!<br>
+							서비스 이용을 위해 <br>
+							약관에 동의해주세요.
+						</h3>
+					</div>
+					@@include('../include/agree_filed.html')
+					<div class="btn-wrap is-fixed">
+						<button class="button is-full is-light" disabled>다음</button>
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+  <!-- 약관 팝업 -->
+  @@include('../include/terms_popup.html')  
+  @@include('../include/footer_js.html')
+</body>
+
+</html>
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll('.open-popup')[0].click();
+  });
+</script>

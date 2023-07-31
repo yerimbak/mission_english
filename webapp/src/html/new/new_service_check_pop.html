@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/head_new.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			@@include('../include/header.html', {
+				headerKeyTitle: '헤더',
+                headerTitleText:'헤더 서브텍스트'
+			})
+
+			<!-- 북클래스 필터 -->
+            <div class="bg-dim"></div>
+
+            <!-- bottomsheet -->
+            <div class="bottom-sheet service-check" id="serviceCheck">
+                <div class="title">
+                  <div class="title"><img src="../img/icons/service-check-tit.png" alt="서비스 점검 안내"></div>
+                </div>
+                <p>9월 29일 새벽 3시 부터 4시까지<br>서비스 점검이 진행될 예정입니다.</p>
+                <div class="btn-wrap type2">
+                    <button type="button" class="btn btn-box disabled">다시 보지 않기</button>
+                    <a href="https://missionenglish.notion.site/1b2d374ecd4c48529ef50cafd62a1cca" target="_blank" class="btn btn-box">자세히보기</a>
+                </div>
+                <button type="button" class="btn-close" data-bottomSheet="bottomSheet01" ></button>
+            </div>
+        </div>
+	</div>
+	@@include('../include/footer_js.html')
+  <script>
+    const bgDim = document.querySelector('.bg-dim');
+    const btnClose = document.querySelector('.btn-close');
+    const bottomSheet = document.querySelector('#serviceCheck');
+
+    window.onload = function () {
+      bgDim.classList.add('on');
+      bottomSheet.classList.add('on');
+      
+    };
+    btnClose.addEventListener('click',function(){
+      bgDim.classList.remove('on');
+      bottomSheet.classList.remove('on');
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body >
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '',
+				headerTitleText: '',
+			})
+			<!-- 220608 : 전반적인 마크업 구조 수정 -->
+			<div class="content type-mission"> 
+				<div class="key-wrap onbording">
+					<!-- 220610 : icon-04 추가 및 텍스트 수정 -->
+					<div class="key-title icon-04">실전대화</div>
+					<div class="typo-wrap">
+						<div class="typo">
+							Shall we have <br> some dessert?
+						</div>
+						<div class="sub-text">디저트 먹으러 갈래?</div>
+					</div>
+					<!-- 220616 : sub-wrap 태그안에서 위로  태그밖으로 위치 이동 -->
+					<!-- 220622 : color-01 -> type-01 클래스 변경  -->
+					<div class="sub-text type-01 ">
+						실제 상황이라 생각하고 대화를 볼까요?
+					</div>
+					<div class="sub-wrap">
+						<div class="btn-wrap">
+							<button type="button" class="btn btn-round color-01">
+								<!-- 220610 : 아이콘태그 삭제 및 텍스트 수정 -->
+								<span>시작하기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- //220608 : 전반적인 마크업 구조 수정 -->
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'off'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html')  
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>

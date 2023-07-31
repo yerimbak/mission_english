@@ -1,0 +1,83 @@
+/* 버튼 */
+.btn-wrap {
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: center;
+	// justify-content: flex-start;
+	&.is-fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: rem(20px);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+	}
+	&.is-between {
+		justify-content: space-between;
+	}
+	&.is-multiple {
+		.button + .button {
+			margin-left:rem(8);
+		}
+	}
+}
+
+.button {
+	height: auto;
+	padding: rem(16px) rem(10px);
+	// background: $white-color;
+	border: rem(1px) solid $grey-color-4;
+	border-radius: rem(8px);
+	color: $base-color;
+	font-size: rem(16px);
+	text-align: center;
+	white-space: nowrap;
+	justify-content: center;
+	cursor: pointer;
+	&.is-full {
+		// width: 100%;
+		flex: 1;
+	}
+	&.is-point {
+		border-color: $primary-color;
+		color: $primary-color ;
+	}
+	&:disabled {
+		border-color: $grey-color-c;
+		color: $grey-color-9;
+	}
+	&.is-light {
+		background-color: $primary-color;
+		color: $white-color;
+		border: none;
+		padding: rem(17px) rem(10px);
+		&[disabled] {
+			background-color: $grey-color-c;
+			// color: $grey-color-9;
+		}
+	}
+	&.is-disabled {
+		background-color: #F0F0F0;
+		color:#999999;
+	}
+	&.is-mid {
+		padding: rem(11px) rem(10px) rem(10px);
+		font-size: rem(14px);
+	}
+	&.w-100 {
+		width:100%;
+	}
+}
+.txtbutton {
+	position: relative;
+	font-size: rem(16px);
+	color: $grey-color-6;
+	&::after {
+		position: absolute;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		background-color: $grey-color-6;
+	}
+}

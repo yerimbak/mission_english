@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+<body>
+	<div id="app">
+        <div class="app-inner">
+			<!-- 220524 header 변경 -->
+			@@include('./include/header.html', {
+				headerKeyTitle: '핵심표현',
+				headerTitleText:'What if I make a mistake?'
+			})
+			<div class="content type-mission bg-gray">
+				<div class="key-wrap finish">
+					<div class="typo">
+						<span>Perfect!</span>
+					</div>
+				</div>
+				<!-- 바텀 시트 버튼 -->
+				@@include('./include/bottomSheetBtn.html', {
+					discriptionActiveClass: 'on'
+				})
+			</div>
+
+			<button type="button" class="btn-top">top</button>
+			<!-- 바텀 시트 컨텐츠 -->
+			@@include('./include/bottomSheetCont.html') 
+        </div>
+	</div>
+	@@include('./include/footer_js.html')
+</body>
+
+</html>
